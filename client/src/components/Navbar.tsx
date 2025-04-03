@@ -9,8 +9,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const defaultNavLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#menu", label: "Menu" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#menu", label: "Menu" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -23,8 +23,8 @@ export default function Navbar() {
   const navLinks = [
     { href: "#home", label: t("navbar.home", "Home") },
     { href: "#about", label: t("navbar.about", "About") },
-    { href: "#menu", label: t("navbar.menu", "Menu") },
     { href: "#gallery", label: t("navbar.gallery", "Gallery") },
+    { href: "#menu", label: t("navbar.menu", "Menu") },
     { href: "#contact", label: t("navbar.contact", "Contact") },
   ];
 
@@ -44,19 +44,23 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`fixed w-full bg-white shadow-md z-40 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
+    <header
+      className={`fixed w-full bg-white shadow-md z-40 transition-all duration-300 ${isScrolled ? "py-2" : "py-3"}`}
+    >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-            <h1 className="text-2xl font-display font-bold text-primary">Restorant Titanic</h1>
+          <h1 className="text-2xl font-display font-bold text-primary">
+            Restorant Titanic
+          </h1>
         </Link>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center">
           <ul className="flex space-x-6 mr-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a 
-                  href={link.href} 
+                <a
+                  href={link.href}
                   className="font-medium hover:text-accent transition-colors"
                 >
                   {link.label}
@@ -66,7 +70,7 @@ export default function Navbar() {
           </ul>
           <LanguageSwitcher />
         </nav>
-        
+
         {/* Mobile Navigation */}
         <div className="flex items-center md:hidden">
           <LanguageSwitcher />
@@ -81,8 +85,8 @@ export default function Navbar() {
                 <ul className="space-y-4">
                   {navLinks.map((link) => (
                     <li key={link.href}>
-                      <a 
-                        href={link.href} 
+                      <a
+                        href={link.href}
                         className="block py-2 font-medium hover:text-accent transition-colors"
                         onClick={handleNavClick}
                       >

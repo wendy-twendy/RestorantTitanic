@@ -3,6 +3,11 @@
     "en": "Anglisht",
     "sq": "Shqip"
   },
+  "hero": {
+    "subtitle": "Gatim Autentik Italian dhe Ushqime Deti të Freskëta në Bregun e Adriatikut",
+    "description": "Përjetoni kuzhinën më të mirë mesdhetare me pamje mahnitëse të detit në zemër të Vlorës",
+    "exploreButton": "Eksploro Menunë Tonë"
+  },
   "navbar": {
     "home": "Kryefaqja",
     "about": "Rreth Nesh",

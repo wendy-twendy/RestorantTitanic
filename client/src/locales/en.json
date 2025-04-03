@@ -3,6 +3,11 @@
     "en": "English",
     "sq": "Albanian"
   },
+  "hero": {
+    "subtitle": "Authentic Italian & Fresh Seafood on the Adriatic Coast",
+    "description": "Experience the finest Mediterranean cuisine with breathtaking sea views in the heart of Vlore",
+    "exploreButton": "Explore Our Menu"
+  },
   "navbar": {
     "home": "Home",
     "about": "About",

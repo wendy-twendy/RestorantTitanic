@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export default function HeroCarousel() {
+  const { t } = useTranslation();
+  
   return (
     <section id="home" className="relative h-screen overflow-hidden">
       <div className="h-full w-full">
@@ -16,14 +19,14 @@ export default function HeroCarousel() {
                 Restorant Titanic
               </h2>
               <p className="text-xl md:text-2xl text-white mb-6 max-w-2xl mx-auto font-light">
-                Authentic Italian & Fresh Seafood on the Adriatic Coast
+                {t('hero.subtitle', 'Authentic Italian & Fresh Seafood on the Adriatic Coast')}
               </p>
               <p className="text-lg text-white mb-8 max-w-xl mx-auto">
-                Experience the finest Mediterranean cuisine with breathtaking sea views in the heart of Vlore
+                {t('hero.description', 'Experience the finest Mediterranean cuisine with breathtaking sea views in the heart of Vlore')}
               </p>
               <a href="#menu">
                 <Button variant="default" className="bg-accent hover:bg-accent/90 text-white shadow-md">
-                  Explore Our Menu
+                  {t('hero.exploreButton', 'Explore Our Menu')}
                 </Button>
               </a>
             </div>
