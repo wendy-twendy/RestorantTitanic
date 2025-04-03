@@ -1,4 +1,6 @@
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const features = [
   "Breathtaking waterfront views",
@@ -20,15 +22,18 @@ export default function About() {
               <p className="mb-4">
                 Welcome to Restorant Titanic, a premier dining destination in Vlore that brings together authentic Italian traditions and the freshest seafood from the Adriatic Sea.
               </p>
-              <p className="mb-4">
-                Established with a passion for exceptional cuisine and hospitality, Restorant Titanic has become a beloved culinary landmark on Vlore's coastline. Our restaurant offers a warm, inviting atmosphere where every meal becomes a memorable experience.
-              </p>
-              <p className="mb-4">
-                Our team of dedicated chefs combines time-honored Italian recipes with locally-sourced seafood to create dishes that celebrate the rich flavors of the Mediterranean. Whether you're enjoying our handmade pastas, wood-fired pizzas, or signature seafood specialties, each plate tells a story of tradition and quality.
-              </p>
               <p>
-                At Restorant Titanic, we believe dining is about more than just food—it's about creating moments to treasure with family and friends against the backdrop of the beautiful Adriatic coast.
+                Established with a passion for exceptional cuisine and hospitality, our restaurant offers a warm, inviting atmosphere where every meal becomes a memorable experience with breathtaking views of the Adriatic coast.
               </p>
+            </div>
+            
+            <div className="mt-6">
+              <Link href="/story">
+                <Button variant="outline" className="group">
+                  Read Our Full Story
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
             
             <div className="mt-8">
@@ -47,7 +52,7 @@ export default function About() {
           <div className="space-y-6">
             <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="/images/ambience-4.jpg" 
+                src="/photos/ambience-4.jpg" 
                 alt="Restorant Titanic oceanfront view" 
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -57,7 +62,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-40 overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="/images/dish-2.jpg" 
+                  src="/photos/dish-2.jpg" 
                   alt="Fresh seafood platter" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -65,7 +70,7 @@ export default function About() {
               </div>
               <div className="relative h-40 overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="/images/ambience-7.jpg" 
+                  src="/photos/ambience-7.jpg" 
                   alt="Outdoor dining terrace" 
                   className="w-full h-full object-cover"
                   loading="lazy"
