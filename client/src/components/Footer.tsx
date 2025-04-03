@@ -71,25 +71,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-primary-700">
-          <ul className="flex flex-wrap justify-center space-x-8">
-            <li>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors">
-                Terms of Service
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors">
-                Accessibility Statement
-              </a>
-            </li>
-          </ul>
-        </div>
+        {/* Footer bottom content removed as requested */}
       </div>
     </footer>
   );

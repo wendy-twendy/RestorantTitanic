@@ -37,7 +37,7 @@ export default function Menu() {
   };
 
   return (
-    <section id="menu" className="py-20 bg-neutral-50">
+    <section id="menu" className="pt-20 pb-10 bg-neutral-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 section-heading">
           {t('menu.title', 'Our Menu')}
