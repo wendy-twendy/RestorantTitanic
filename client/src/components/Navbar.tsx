@@ -4,6 +4,7 @@ import { Menu } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useBasePath } from "@/hooks/use-base-path";
 
 // Default nav labels
 const defaultNavLinks = [
@@ -18,6 +19,7 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const basePath = useBasePath();
 
   // Define nav links with translations and fallbacks
   const navLinks = [
@@ -48,7 +50,7 @@ export default function Navbar() {
       className={`fixed w-full bg-white shadow-md z-40 transition-all duration-300 ${isScrolled ? "py-2" : "py-3"}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
+        <Link href={`${basePath}/`} className="flex items-center">
           <h1 className="text-2xl font-display font-bold text-primary">
             Restorant Titanic
           </h1>

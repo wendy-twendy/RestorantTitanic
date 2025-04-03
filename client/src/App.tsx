@@ -6,13 +6,17 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import StoryPage from "@/pages/Story";
 import { LanguageProvider } from "./hooks/use-language";
+import { useBasePath } from "./hooks/use-base-path";
 import './lib/i18n'; // Import i18n configuration
 
+// Custom Router that handles the base path for GitHub Pages
 function Router() {
+  const basePath = useBasePath();
+  
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/story" component={StoryPage} />
+      <Route path={`${basePath}/`} component={Home} />
+      <Route path={`${basePath}/story`} component={StoryPage} />
       <Route component={NotFound} />
     </Switch>
   );

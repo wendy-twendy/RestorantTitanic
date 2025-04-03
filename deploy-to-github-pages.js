@@ -14,9 +14,9 @@ const repoName = 'restaurant-titanic';
 
 console.log('📦 Building the static site for GitHub Pages deployment...');
 
-// Run Vite build to generate the static site
+// Run Vite build with GitHub Pages configuration to generate the static site
 try {
-  execSync('vite build', { stdio: 'inherit' });
+  execSync('vite build --config vite.config.github-pages.js', { stdio: 'inherit' });
   console.log('✅ Build completed successfully');
 } catch (error) {
   console.error('❌ Build failed', error);
