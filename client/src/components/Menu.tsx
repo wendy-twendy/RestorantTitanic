@@ -4,19 +4,14 @@ import { menuCategories } from "@/data/menuData";
 // Featured dishes with actual images
 const featuredDishes = [
   {
-    name: "Grilled Sea Bass",
-    description: "Fresh sea bass grilled with Mediterranean herbs, olive oil, and lemon",
-    image: "/photos/dish-3.jpg"
+    name: "Crudo Mix",
+    description: "A delicate selection of raw seafood, including fresh local catch, served with citrus and herbs",
+    image: "/photos/dish-10.jpg"
   },
   {
-    name: "Seafood Risotto",
-    description: "Creamy risotto with prawns, mussels, and fresh catch of the day",
-    image: "/photos/dish-4.jpg"
-  },
-  {
-    name: "Seafood Platter",
-    description: "A selection of the freshest Adriatic seafood, grilled to perfection",
-    image: "/photos/dish-9.jpg"
+    name: "Seafood Pasta",
+    description: "Homemade pasta with a rich medley of fresh seafood in a light tomato sauce",
+    image: "/photos/dish-8.jpg"
   }
 ];
 
@@ -34,7 +29,7 @@ export default function Menu() {
         {/* Featured Dishes */}
         <div className="mb-16">
           <h3 className="text-2xl font-display font-semibold text-center mb-8">Signature Dishes</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {featuredDishes.map((dish, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
                 <div className="h-56 overflow-hidden">
