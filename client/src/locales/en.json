@@ -24,6 +24,27 @@
       "Relaxing atmosphere perfect for any occasion"
     ]
   },
+  "story": {
+    "pageTitle": "Our Story",
+    "backToHome": "Back to Home",
+    "returnToHome": "Return to Home",
+    "heritage": {
+      "title": "Our Heritage",
+      "paragraph1": "Welcome to Restorant Titanic, a premier dining destination in Vlore that brings together authentic Italian traditions and the freshest seafood from the Adriatic Sea.",
+      "paragraph2": "Established with a passion for exceptional cuisine and hospitality, Restorant Titanic has become a beloved culinary landmark on Vlore's coastline. Our restaurant offers a warm, inviting atmosphere where every meal becomes a memorable experience."
+    },
+    "culinaryPhilosophy": {
+      "title": "Our Culinary Philosophy",
+      "paragraph1": "Our team of dedicated chefs combines time-honored Italian recipes with locally-sourced seafood to create dishes that celebrate the rich flavors of the Mediterranean. Whether you're enjoying our handmade pastas, wood-fired pizzas, or signature seafood specialties, each plate tells a story of tradition and quality.",
+      "paragraph2": "The menu at Restorant Titanic reflects our dedication to using only the finest, freshest ingredients. Every morning, our chef personally selects the day's catch from local fishermen, ensuring that what reaches your table represents the best the Adriatic has to offer."
+    },
+    "commitment": {
+      "title": "Our Commitment",
+      "paragraph1": "At Restorant Titanic, we believe dining is about more than just food—it's about creating moments to treasure with family and friends against the backdrop of the beautiful Adriatic coast.",
+      "paragraph2": "From our attentive service to our thoughtfully crafted dishes, every aspect of Restorant Titanic is designed to provide an authentic Mediterranean dining experience. We are committed to maintaining the highest standards of quality and hospitality, ensuring that each visit exceeds expectations.",
+      "paragraph3": "As we look to the future, we remain dedicated to our founding principles: exceptional food, warm hospitality, and a celebration of the rich culinary traditions that make the Mediterranean region so special."
+    }
+  },
   "menu": {
     "title": "Our Menu",
     "description": "Savor the authentic flavors of the Mediterranean",

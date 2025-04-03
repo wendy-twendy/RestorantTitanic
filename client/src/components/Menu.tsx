@@ -32,8 +32,8 @@ export default function Menu() {
   const featuredDishes = getFeaturedDishes(t);
   
   // Safely access language-specific content
-  const getLocalizedContent = (content: {en: string, sq: string}) => {
-    return content[language as 'en' | 'sq'];
+  const getLocalizedContent = (content: {en: string, sq?: string}) => {
+    return content[language as 'en' | 'sq'] || content.en;
   };
 
   return (

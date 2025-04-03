@@ -24,14 +24,35 @@
       "Atmosferë relaksuese e përsosur për çdo rast"
     ]
   },
+  "story": {
+    "pageTitle": "Historia Jonë",
+    "backToHome": "Kthehu në Kryefaqe",
+    "returnToHome": "Kthehu në Kryefaqe",
+    "heritage": {
+      "title": "Trashëgimia Jonë",
+      "paragraph1": "Mirësevini në Restorant Titanic, një destinacion kryesor për darkën në Vlorë që sjell bashkë traditat autentike italiane dhe ushqimet më të freskëta të detit nga deti Adriatik.",
+      "paragraph2": "Themeluar me pasion për kuzhinë dhe pritje të jashtëzakonshme, Restorant Titanic është bërë një pikë e dashur kulinarie në bregun e Vlorës. Restoranti ynë ofron një atmosferë të ngrohtë dhe mikpritëse ku çdo vakt bëhet një përvojë e paharrueshme."
+    },
+    "culinaryPhilosophy": {
+      "title": "Filozofia Jonë Kulinare",
+      "paragraph1": "Ekipi ynë i kuzhinierëve të përkushtuar kombinon receta italiane tradicionale me prodhime detare të siguruara lokalisht për të krijuar pjata që festojnë shijet e pasura të Mesdheut. Qoftë duke shijuar pastat tona të bëra në shtëpi, picave të gatuara në furrë druri, ose specialitetet e frytave të detit, secila pjatë tregon një histori tradite dhe cilësie.",
+      "paragraph2": "Menuja në Restorant Titanic pasqyron përkushtimin tonë për të përdorur vetëm përbërësit më të mirë dhe më të freskët. Çdo mëngjes, kuzhinieri ynë personalisht zgjedh peshkimin e ditës nga peshkatarët vendas, duke siguruar që ajo që arrin në tryezën tuaj përfaqëson më të mirën që ofron Adriatiku."
+    },
+    "commitment": {
+      "title": "Angazhimi Ynë",
+      "paragraph1": "Në Restorant Titanic, ne besojmë se darka është më shumë se thjesht ushqim - është për të krijuar momente për të vlerësuar me familjen dhe miqtë në prapavijën e bregdetit të bukur të Adriatikut.",
+      "paragraph2": "Nga shërbimi ynë i vëmendshëm tek pjatat tona të përgatitura me kujdes, çdo aspekt i Restorant Titanic është projektuar për të ofruar një përvojë autentike të kuzhinës mesdhetare. Ne jemi të përkushtuar për të ruajtur standardet më të larta të cilësisë dhe mikpritjes, duke siguruar që çdo vizitë të tejkalojë pritshmëritë.",
+      "paragraph3": "Ndërsa shikojmë drejt së ardhmes, ne mbetemi të përkushtuar ndaj parimeve tona themeluese: ushqim i jashtëzakonshëm, mikpritje e ngrohtë dhe një festim i traditave të pasura kulinare që e bëjnë rajonin e Mesdheut kaq të veçantë."
+    }
+  },
   "menu": {
-    "title": "Menu Jonë",
+    "title": "Menuja Jonë",
     "description": "Shijoni shijët autentike të Mesdheut",
     "signatureDishes": "Pjatat tona të Veçanta",
     "allPricesNote": "Të gjitha çmimet janë në Lek shqiptar (ALL). Artikujt e menusë dhe çmimet mund të ndryshojnë sezonalisht për të siguruar që shërbejmë vetëm përbërësit më të freskët.",
     "featuredDishes": {
       "crudoMix": {
-        "name": "Miksi Crudo",
+        "name": "Miks Crudo",
         "description": "Një përzgjedhje delikate e prodhimeve të detit të papërpunuara, përfshirë peshk të freskët lokal, e shërbyer me lëng limoni dhe barishte"
       },
       "seafoodPasta": {
@@ -45,7 +66,7 @@
         "description": "Të freskëta nga Deti Adriatik, ushqimet tona të detit zgjidhen çdo ditë për të siguruar cilësinë më të lartë."
       },
       "appetizers": {
-        "title": "Aperitivë të Pjekur & Skuqur",
+        "title": "Aperitivë të Pjekur/Skuqur",
         "description": "Startera perfekte për t'u ndarë dhe shijuar me përzgjedhjen tonë të verërave."
       },
       "crudo": {
@@ -68,7 +89,7 @@
   },
   "gallery": {
     "title": "Galeria Jonë",
-    "description": "Një vështrim në përvojën e Restorant Titanic",
+    "description": "Një vështrim mbi përvojën e Restorant Titanic",
     "filter": {
       "all": "Të Gjitha",
       "dishes": "Gatimet",
@@ -76,7 +97,7 @@
     }
   },
   "contact": {
-    "title": "Na Gjeni",
+    "title": "Ku na Gjeni",
     "addressTitle": "Adresa",
     "addressLine2": "Përballë me Hotel Regina City",
     "addressLine3": "Vlorë 9401, Shqipëri",
