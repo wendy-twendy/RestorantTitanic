@@ -86,7 +86,7 @@ export default function Contact() {
           <div className="h-full min-h-[400px]">
             <div className="h-full rounded-lg shadow-md overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3023.5105842044723!2d19.476720315415103!3d40.72906437932969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134531ee0309bd89%3A0x96e1ddf76e880d15!2sRruga%20Pavllo%20Floqi%2C%20Vlor%C3%AB%2C%20Albania!5e0!3m2!1sen!2sus!4v1649235978432!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.6984644800236!2d19.493032975723427!3d40.43767537143624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13453235b944dbdb%3A0xc7c33b44a0f8cdbb!2sRestorant%20Titanic!5e0!3m2!1sen!2s!4v1743693985957!5m2!1sen!2s"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }}

@@ -1,4 +1,5 @@
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
+import { SiTripadvisor } from "react-icons/si";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -37,18 +38,31 @@ export default function Footer() {
             <p className="mb-4 text-primary-100">Follow us on social media for updates and special offers</p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/restoranttitanic/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-accent transition-colors" 
                 aria-label="Facebook"
               >
                 <Facebook className="h-6 w-6" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/titanic_restorant/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-accent transition-colors" 
                 aria-label="Instagram"
               >
                 <Instagram className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://www.tripadvisor.com/Restaurant_Review-g678774-d5929304-Reviews-Restorant_Titanic-Vlore_Vlore_County.html" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-accent transition-colors" 
+                aria-label="TripAdvisor"
+              >
+                <SiTripadvisor className="h-6 w-6" />
               </a>
             </div>
           </div>
