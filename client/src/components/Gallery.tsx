@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface GalleryImage {
   src: string;
@@ -91,6 +99,7 @@ export default function Gallery() {
   const [filter, setFilter] = useState<FilterCategory>("all");
   const [openLightbox, setOpenLightbox] = useState(false);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const isMobile = useIsMobile();
 
   const filteredImages = filter === "all" 
     ? galleryImages 
@@ -132,21 +141,49 @@ export default function Gallery() {
           </Button>
         </div>
         
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filteredImages.map((image, index) => (
-            <div key={index} className="gallery-item cursor-pointer" onClick={() => handleImageClick(image)}>
-              <div className="relative overflow-hidden rounded-lg shadow-md h-64">
-                <img 
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  loading="lazy"
-                />
+        {/* Mobile Carousel View */}
+        {isMobile ? (
+          <div className="mb-4">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {filteredImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="gallery-item cursor-pointer" onClick={() => handleImageClick(image)}>
+                      <div className="relative overflow-hidden rounded-lg shadow-md h-64 mx-1">
+                        <img 
+                          src={image.src} 
+                          alt={image.alt} 
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center mt-4">
+                <CarouselPrevious className="relative mr-2 static translate-y-0" />
+                <CarouselNext className="relative ml-2 static translate-y-0" />
               </div>
-            </div>
-          ))}
-        </div>
+            </Carousel>
+          </div>
+        ) : (
+          /* Desktop Grid View */
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {filteredImages.map((image, index) => (
+              <div key={index} className="gallery-item cursor-pointer" onClick={() => handleImageClick(image)}>
+                <div className="relative overflow-hidden rounded-lg shadow-md h-64">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         
         {/* Lightbox */}
         <Dialog open={openLightbox} onOpenChange={setOpenLightbox}>
