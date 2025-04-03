@@ -13,73 +13,73 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   // Dish photos
   {
-    src: "/images/dish-1.jpg",
+    src: "photos/dish-1.jpg",
     alt: "Seafood pasta with clams and mussels",
     category: "dishes"
   },
   {
-    src: "/images/dish-2.jpg",
+    src: "photos/dish-2.jpg",
     alt: "Fresh Mediterranean seafood platter",
     category: "dishes"
   },
   {
-    src: "/images/dish-3.jpg",
+    src: "photos/dish-3.jpg",
     alt: "Grilled fish with herbs",
     category: "dishes"
   },
   {
-    src: "/images/dish-4.jpg",
+    src: "photos/dish-4.jpg",
     alt: "Seafood risotto with prawns",
     category: "dishes"
   },
   {
-    src: "/images/dish-5.jpg",
+    src: "photos/dish-5.jpg",
     alt: "Grilled calamari with vegetables",
     category: "dishes"
   },
   {
-    src: "/images/dish-6.jpg",
+    src: "photos/dish-6.jpg",
     alt: "Traditional Italian pasta dish",
     category: "dishes"
   },
   {
-    src: "/images/dish-7.jpg",
+    src: "photos/dish-7.jpg",
     alt: "Fresh fish with citrus garnish",
     category: "dishes"
   },
   {
-    src: "/images/dish-8.jpg",
+    src: "photos/dish-8.jpg",
     alt: "Seafood soup with mussels",
     category: "dishes"
   },
   // Ambience photos
   {
-    src: "/images/ambience-2.jpg",
+    src: "photos/ambience-2.jpg",
     alt: "Restorant Titanic interior view",
     category: "ambience"
   },
   {
-    src: "/images/ambience-3.jpg",
+    src: "photos/ambience-3.jpg",
     alt: "Dining area with elegant setting",
     category: "ambience"
   },
   {
-    src: "/images/ambience-4.jpg",
+    src: "photos/ambience-4.jpg",
     alt: "Oceanfront terrace dining",
     category: "ambience"
   },
   {
-    src: "/images/ambience-5.jpg",
+    src: "photos/ambience-5.jpg",
     alt: "Wine display in the restaurant",
     category: "ambience"
   },
   {
-    src: "/images/ambience-6.jpg",
+    src: "photos/ambience-6.jpg",
     alt: "Seaside dining with sunset view",
     category: "ambience"
   },
   {
-    src: "/images/ambience-7.jpg",
+    src: "photos/ambience-7.jpg",
     alt: "Outdoor terrace with sea view",
     category: "ambience"
   }

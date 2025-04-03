@@ -52,7 +52,7 @@ export default function About() {
           <div className="space-y-6">
             <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="/photos/ambience-4.jpg" 
+                src="photos/ambience-4.jpg" 
                 alt="Restorant Titanic oceanfront view" 
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -62,7 +62,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-40 overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="/photos/dish-2.jpg" 
+                  src="photos/dish-2.jpg" 
                   alt="Fresh seafood platter" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -70,7 +70,7 @@ export default function About() {
               </div>
               <div className="relative h-40 overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="/photos/ambience-7.jpg" 
+                  src="photos/ambience-7.jpg" 
                   alt="Outdoor dining terrace" 
                   className="w-full h-full object-cover"
                   loading="lazy"
