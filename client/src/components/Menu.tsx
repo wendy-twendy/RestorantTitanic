@@ -57,13 +57,13 @@ export default function Menu() {
         
         {/* Menu Categories Tabs */}
         <div className="mb-12">
-          <Tabs defaultValue="fish" value={activeCategory} onValueChange={setActiveCategory}>
-            <TabsList className="flex flex-wrap justify-center p-0 mb-6 bg-transparent">
+          <Tabs defaultValue="fish" value={activeCategory} onValueChange={setActiveCategory} className="pt-5">
+            <TabsList className="flex flex-wrap justify-center p-0 mb-10 bg-transparent gap-2 max-w-full">
               {menuCategories.map((category) => (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="mx-1 my-1 px-5 py-2 border border-primary-200 data-[state=active]:bg-primary data-[state=active]:text-white"
+                  className="px-4 py-2 border border-primary-200 data-[state=active]:bg-primary data-[state=active]:text-white text-sm md:text-base whitespace-nowrap"
                 >
                   {category.title}
                 </TabsTrigger>
@@ -72,9 +72,9 @@ export default function Menu() {
             
             {/* Menu Content */}
             {menuCategories.map((category) => (
-              <TabsContent key={category.id} value={category.id}>
-                <Card>
-                  <CardContent className="p-6">
+              <TabsContent key={category.id} value={category.id} className="mt-2">
+                <Card className="overflow-visible">
+                  <CardContent className="p-6 pt-8">
                     <div className="mb-6">
                       <h3 className="text-2xl font-display font-semibold mb-2">{category.title}</h3>
                       <p className="text-neutral-600">{category.description}</p>
