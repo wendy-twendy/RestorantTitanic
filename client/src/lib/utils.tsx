@@ -17,5 +17,11 @@ export function scrollToElement(elementId: string) {
       behavior: "smooth",
       block: "start",
     });
+  } else {
+    // If no element with that ID exists, scroll to top of page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 }

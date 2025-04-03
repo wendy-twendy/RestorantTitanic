@@ -1,7 +1,8 @@
 import { CheckIcon, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 // Default features in case translations aren't loaded
 const defaultFeatures = [
@@ -14,9 +15,16 @@ const defaultFeatures = [
 
 export default function About() {
   const { t } = useTranslation();
+  const [, setLocation] = useLocation();
 
   // Get features from translations with fallback
   const features = t('about.features', { returnObjects: true }) as string[] || defaultFeatures;
+  
+  // Handle navigation to story page with scroll reset
+  const handleStoryClick = () => {
+    setLocation("/story");
+    // The Story component will handle scrolling to top with useEffect
+  };
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -37,12 +45,10 @@ export default function About() {
             </div>
             
             <div className="mt-6">
-              <Link href="/story">
-                <Button variant="outline" className="group">
-                  {t('about.readMore', 'Read Our Full Story')}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <Button variant="outline" className="group" onClick={handleStoryClick}>
+                {t('about.readMore', 'Read Our Full Story')}
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
             
             <div className="mt-8">

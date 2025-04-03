@@ -3,10 +3,16 @@ import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/use-language";
+import { useEffect } from "react";
 
 export default function StoryPage() {
   const { t } = useTranslation();
   const { language } = useLanguage();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-16">
