@@ -50,8 +50,54 @@ const indexHtml = `
 `;
 
 // Create a .nojekyll file to disable Jekyll processing
-fs.writeFileSync(path.join(__dirname, 'dist/public', '.nojekyll'), '');
+fs.writeFileSync(path.join(__dirname, 'dist', '.nojekyll'), '');
 console.log('✅ .nojekyll file created to disable Jekyll processing');
+
+// Create a 404.html that redirects to index.html to support client-side routing
+const notFoundHtml = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Restaurant Titanic</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current URL and converts the path and query string into
+      // a query parameter called 'route' which is used by the app to determine the correct route
+      const segment = 1;
+      const l = window.location;
+      const origin = l.origin;
+      const firstPath = l.pathname.split('/')[1];
+      
+      // Only redirect if the path is not part of the GitHub repo name
+      if (firstPath === '${repoName}') {
+        l.replace(
+          origin + 
+          l.pathname.split('/').slice(0, segment + 1).join('/') + 
+          '/?route=' + 
+          encodeURIComponent(l.pathname.slice(segment + 1)) +
+          l.search
+        );
+      } else {
+        l.replace(
+          origin + 
+          '/${repoName}/' + 
+          '?route=' + 
+          encodeURIComponent(l.pathname.slice(1)) +
+          l.search
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Restaurant Titanic...</p>
+  </body>
+</html>
+`;
+
+fs.writeFileSync(path.join(__dirname, 'dist', '404.html'), notFoundHtml);
+console.log('✅ 404.html file created for client-side routing support');
 
 // Create a vite.config.js file with the base configuration for GitHub Pages
 const viteConfigJs = `
@@ -72,14 +118,19 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, 'client'),
   build: {
-    outDir: path.resolve(__dirname, 'dist/public'),
+    outDir: path.resolve(__dirname, 'dist'),
     emptyOutDir: true,
   },
+  // Define environment variables for production build
+  define: {
+    // Flag to indicate this is a static build for GitHub Pages
+    'import.meta.env.VITE_STATIC_BUILD': JSON.stringify(true),
+  }
 });
 `;
 
 console.log('🚀 Publishing to GitHub Pages...');
-ghpages.publish('dist/public', {
+ghpages.publish('dist', {
   branch: 'gh-pages',
   message: 'Auto-generated commit by gh-pages',
 }, (err) => {

@@ -22,12 +22,12 @@ const getFeaturedDishes = (t: any): FeaturedDish[] => [
   {
     name: t('menu.featuredDishes.crudoMix.name', 'Crudo Mix'),
     description: t('menu.featuredDishes.crudoMix.description', 'A delicate selection of raw seafood, including fresh local catch, served with citrus and herbs'),
-    image: "/photos/dish-10.jpg"
+    image: "images/dish-10.jpg"
   },
   {
     name: t('menu.featuredDishes.seafoodPasta.name', 'Seafood Pasta'),
     description: t('menu.featuredDishes.seafoodPasta.description', 'Homemade pasta with a rich medley of fresh seafood in a light tomato sauce'),
-    image: "/photos/dish-8.jpg"
+    image: "images/dish-8.jpg"
   }
 ];
 

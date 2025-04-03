@@ -30,11 +30,11 @@ VITE_CONFIG_FILE=vite.config.github-pages.js npx vite build
 
 # Create a .nojekyll file in the dist folder to disable Jekyll processing
 echo "🔧 Creating .nojekyll file to disable Jekyll processing..."
-touch dist/public/.nojekyll
+touch dist/.nojekyll
 
 # Deploy to GitHub Pages
 echo "🚀 Deploying to GitHub Pages..."
-npx gh-pages -d dist/public
+npx gh-pages -d dist
 
 echo "✅ Deployment complete!"
 echo "Your website should be available at: https://yourusername.github.io/restaurant-titanic/"

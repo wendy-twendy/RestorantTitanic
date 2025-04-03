@@ -21,7 +21,12 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
+  // Define environment variables for production build
+  define: {
+    // Flag to indicate this is a static build for GitHub Pages
+    'import.meta.env.VITE_STATIC_BUILD': JSON.stringify(true),
+  }
 });
