@@ -2,27 +2,18 @@ import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link } from "wouter";
-import { useLanguage, Language } from "@/contexts/LanguageContext";
-import { Button } from "@/components/ui/button";
+
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#menu", label: "Menu" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { href: "#home", label: t('nav.home') },
-    { href: "#about", label: t('nav.about') },
-    { href: "#menu", label: t('nav.menu') },
-    { href: "#gallery", label: t('nav.gallery') },
-    { href: "#contact", label: t('nav.contact') },
-  ];
-
-  // Toggle language between English and Albanian
-  const toggleLanguage = () => {
-    const newLanguage: Language = language === 'en' ? 'al' : 'en';
-    setLanguage(newLanguage);
-  };
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -47,7 +38,7 @@ export default function Navbar() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:block">
           <ul className="flex space-x-6">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -60,55 +51,33 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          
-          {/* Language Toggle */}
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={toggleLanguage}
-            className="ml-4 font-medium"
-          >
-            {language === 'en' ? 'AL' : 'EN'}
-          </Button>
         </nav>
         
         {/* Mobile Navigation */}
-        <div className="flex items-center md:hidden">
-          {/* Language Toggle for Mobile */}
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={toggleLanguage}
-            className="mr-4 font-medium"
-          >
-            {language === 'en' ? 'AL' : 'EN'}
-          </Button>
-          
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <button aria-label="Open menu" className="focus:outline-none">
-                <Menu className="h-6 w-6 text-primary" />
-              </button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[250px] sm:w-[300px]">
-              <nav className="mt-8">
-                <ul className="space-y-4">
-                  {navLinks.map((link) => (
-                    <li key={link.href}>
-                      <a 
-                        href={link.href} 
-                        className="block py-2 font-medium hover:text-accent transition-colors"
-                        onClick={handleNavClick}
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <button aria-label="Open menu" className="focus:outline-none">
+              <Menu className="h-6 w-6 text-primary" />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[250px] sm:w-[300px]">
+            <nav className="mt-8">
+              <ul className="space-y-4">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <a 
+                      href={link.href} 
+                      className="block py-2 font-medium hover:text-accent transition-colors"
+                      onClick={handleNavClick}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   );

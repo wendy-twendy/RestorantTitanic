@@ -1,22 +1,20 @@
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import { SiTripadvisor } from "react-icons/si";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "wouter";
 
 export default function Footer() {
-  const { language, t } = useLanguage();
-  
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-display font-bold mb-4">{t('hero.title')}</h3>
-            <p className="mb-4 text-primary-100">{t('hero.subtitle')}</p>
-            <p className="text-sm text-primary-200">© 2025 Restorant Titanic. {t('footer.rights')}</p>
+            <h3 className="text-2xl font-display font-bold mb-4">Restorant Titanic</h3>
+            <p className="mb-4 text-primary-100">Authentic Italian & Fresh Seafood on the Adriatic Coast</p>
+            <p className="text-sm text-primary-200">© 2025 Restorant Titanic. All Rights Reserved.</p>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">{t('contact.title')}</h4>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="flex items-start mb-2">
               <MapPin className="h-5 w-5 mr-2 text-accent mt-0.5" />
               <span>
@@ -36,12 +34,8 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">{t('footer.follow')}</h4>
-            <p className="mb-4 text-primary-100">
-              {language === 'en' 
-                ? 'Follow us on social media for updates and special offers'
-                : 'Na ndiqni në mediat sociale për përditësime dhe oferta të veçanta'}
-            </p>
+            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+            <p className="mb-4 text-primary-100">Follow us on social media for updates and special offers</p>
             <div className="flex space-x-4">
               <a 
                 href="https://www.facebook.com/restoranttitanic/" 
@@ -78,17 +72,17 @@ export default function Footer() {
           <ul className="flex flex-wrap justify-center space-x-8">
             <li>
               <a href="#" className="text-primary-200 hover:text-white transition-colors">
-                {language === 'en' ? 'Privacy Policy' : 'Politika e Privatësisë'}
+                Privacy Policy
               </a>
             </li>
             <li>
               <a href="#" className="text-primary-200 hover:text-white transition-colors">
-                {language === 'en' ? 'Terms of Service' : 'Kushtet e Shërbimit'}
+                Terms of Service
               </a>
             </li>
             <li>
               <a href="#" className="text-primary-200 hover:text-white transition-colors">
-                {language === 'en' ? 'Accessibility Statement' : 'Deklarata e Aksesueshmërisë'}
+                Accessibility Statement
               </a>
             </li>
           </ul>
