@@ -1,0 +1,394 @@
+# Product Requirements Document: Restorant Titanic Landing Page
+
+## 1. Project Overview
+Create a visually appealing, responsive landing page for Restorant Titanic that showcases the restaurant's ambiance, cuisine, and key information using existing photography. The website will serve as a digital storefront to attract new customers and provide essential information to visitors.
+
+## 2. Target Audience
+- Local residents of Vlore, Albania
+- Tourists visiting the Adriatic coast
+- Food enthusiasts interested in Italian and seafood cuisine
+- Potential customers researching dining options
+
+## 3. Business Goals
+- Increase visibility and brand awareness for Restorant Titanic
+- Showcase the restaurant's ambiance and cuisine through photography
+- Provide essential information to potential customers
+- Drive foot traffic to the physical location
+
+## 4. Technical Requirements
+- **Frontend Framework**: React
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide Icons
+- **UI Components**: shadcn/ui component library
+- **Responsive Design**: Fully optimized for both desktop and mobile
+- **Asset Management**: Optimized loading of 20+ restaurant photos
+
+## 5. Key Features & Content
+
+### 5.1 Hero Section
+- Full-width hero image carousel showcasing 3-5 best restaurant photos
+- Restaurant name, tagline, and brief description
+- Call-to-action button linking to the menu section
+
+### 5.2 About Section
+- Restaurant story and unique selling points
+- Location information with embedded map
+- Business hours display
+- Contact information (phone number)
+
+### 5.3 Menu Highlights
+- Complete menu with categorized sections
+- Brief descriptions of signature items
+- Price display for all items
+- Menu categories as provided by the restaurant
+
+### 5.4 Photo Gallery
+- Responsive grid layout showcasing all 20 restaurant photos
+- Lightbox functionality for enlarged viewing
+- Category filtering (Dishes, Ambiance)
+
+### 5.5 Contact & Location
+- Address with map integration
+- Contact form (optional)
+- Operating hours
+- Social media links
+
+### 5.6 Footer
+- Copyright information
+- Privacy policy link
+- Terms of service link
+- Social media icons
+
+## 6. User Experience Requirements
+
+### 6.1 Desktop Experience
+- Full-width layout optimized for larger screens
+- Horizontal navigation menu
+- Multi-column content sections
+- Hover effects for interactive elements
+- Smooth scrolling between sections
+
+### 6.2 Mobile Experience
+- Single-column, stacked layout
+- Hamburger menu for navigation
+- Touch-optimized gallery
+- Appropriate text sizing for readability
+- Click-to-call functionality for phone number
+
+## 7. Visual Design Requirements
+- Color palette based on restaurant branding (suggested: deep blues, whites, and warm accents reflecting the Mediterranean theme)
+- Typography: Primary font for headings, secondary font for body text
+- Image treatments: consistent styling across all photos
+- White space utilization for clean, elegant design
+- Visual hierarchy emphasizing photography
+
+## 8. Performance Requirements
+- Image optimization for fast loading
+- Lazy loading for gallery images
+- Core Web Vitals optimization
+- Overall page load time under 3 seconds
+
+## 9. Accessibility Requirements
+- WCAG 2.1 AA compliance
+- Keyboard navigation support
+- Screen reader compatibility
+- Appropriate color contrast ratios
+- Alt text for all images
+
+## 10. Component Implementation Details
+
+### React Component Structure
+- `<Layout>`: Main wrapper component
+- `<Navbar>`: Navigation component
+- `<HeroCarousel>`: Image carousel component
+- `<MenuSection>`: Menu display component
+- `<Gallery>`: Photo gallery with filtering
+- `<ContactInfo>`: Location and contact details
+- `<Footer>`: Site footer with links
+
+### Tailwind Implementation
+- Custom theme configuration for restaurant branding
+- Responsive class utilities for all components
+- Container constraints for content sections
+- Consistent spacing system
+
+### shadcn/ui Components to Utilize
+- Card components for menu items
+- Dialog components for photo lightbox
+- Sheet component for mobile navigation
+- Carousel component for testimonials
+- Accordion component for menu categories
+
+## 11. Website Content
+
+### Navigation Menu Text
+- Home
+- About
+- Menu
+- Gallery
+- Contact
+
+### Hero Section
+**Headline:** "Restorant Titanic"
+**Tagline:** "Authentic Italian & Fresh Seafood on the Adriatic Coast"
+**Brief Description:** "Experience the finest Mediterranean cuisine with breathtaking sea views in the heart of Vlore"
+**CTA Button:** "Explore Our Menu"
+
+### About Section
+**Heading:** "Our Story"
+**Content:**
+```
+Welcome to Restorant Titanic, a premier dining destination in Vlore that brings together authentic Italian traditions and the freshest seafood from the Adriatic Sea.
+
+Established with a passion for exceptional cuisine and hospitality, Restorant Titanic has become a beloved culinary landmark on Vlore's coastline. Our restaurant offers a warm, inviting atmosphere where every meal becomes a memorable experience.
+
+Our team of dedicated chefs combines time-honored Italian recipes with locally-sourced seafood to create dishes that celebrate the rich flavors of the Mediterranean. Whether you're enjoying our handmade pastas, wood-fired pizzas, or signature seafood specialties, each plate tells a story of tradition and quality.
+
+At Restorant Titanic, we believe dining is about more than just food—it's about creating moments to treasure with family and friends against the backdrop of the beautiful Adriatic coast.
+```
+
+**Why Choose Us:**
+- Breathtaking waterfront views
+- Authentic Italian and Mediterranean cuisine
+- Fresh, locally-sourced seafood
+- Warm, attentive service
+- Relaxing atmosphere perfect for any occasion
+
+### Menu Section
+**Heading:** "Our Menu"
+**Subheading:** "Savor the authentic flavors of the Mediterranean"
+
+#### Fish Menu
+**Section Heading:** "Fish Specialties"
+**Description:** "Fresh from the Adriatic Sea, our seafood is selected daily to ensure the highest quality."
+
+- Fish (I quality) - 7000 ALL
+- Fish (II quality) - 5500 ALL
+- Fish (III quality) - 4500 ALL
+- Oven baked fish with vegetables - 7000 ALL
+- Grilled wild shrimps (0.3 kg) - 2100 ALL
+- Scampi (I quality, 0.3 kg) - 2100 ALL
+- Red goat-fish (I quality) - 5000 ALL
+- Grilled salmon (0.3 kg) - 1800 ALL
+- Raw fish according to the quality - Price varies
+- Lobster (1 kg) - 14000 ALL
+- Sea cicada (1 kg) - 14000 ALL
+
+#### Grilled & Fried Appetizers
+**Section Heading:** "Grilled & Fried Appetizers"
+**Description:** "Perfect starters to share and enjoy with our selection of wines."
+
+- Grilled octopus - 1900 ALL
+- Sauteed mussels - 800 ALL
+- Sauteed shrimps (0.2 kg) - 1400 ALL
+- Mixed fried seafood - 1500 ALL
+- Mixed grilled seafood (0.3 kg) - 1500 ALL
+- Mixed grilled seafood (0.5 kg) - 2800 ALL
+- Fried shrimps - 1500 ALL
+- Fried calamari - 1500 ALL
+- Shrimps saganaki - 1300 ALL
+- Grilled squid - 1800 ALL
+- A Capesante (1 piece) - 400 ALL
+- Fish balls - 1000 ALL
+- Crab balls - 1000 ALL
+- Small appetizer (2 pax) - 2750 ALL
+- Large appetizer (4 pax) - 5500 ALL
+
+#### Crudo Appetizers
+**Section Heading:** "Crudo Appetizers"
+**Description:** "Fresh raw delicacies prepared in the traditional Mediterranean style."
+
+- Crude shrimps (0.2 kg) - 1400 ALL
+- Crude salmon (0.2 kg) - 1500 ALL
+- Crude scampi (0.3 kg) - 2100 ALL
+- Octapus carpaccio (0.3 kg) - 1500 ALL
+- Crude (2 pax) - 2750 ALL
+- Crude (4 pax) - 5500 ALL
+- Marinated acuge - 1000 ALL
+- Octapus Salad - 1800 ALL
+- Salad seafood - 1500 ALL
+
+#### Pasta & Risotto
+**Section Heading:** "Pasta & Risotto"
+**Description:** "Traditional Italian pastas and risottos with Mediterranean influences."
+
+- Linguine with tomato sauce - 600 ALL
+- Linguine with butter - 500 ALL
+- Linguine Bolognese - 1000 ALL
+- Linguine with small shrimps - 1000 ALL
+- Linguine with seafood - 1000 ALL
+- Linguine with scampi - 1200 ALL
+- Linguine with first quality shrimps - 1200 ALL
+- Penne with shrimps and zucchini - 1000 ALL
+- Penne pana with ham - 800 ALL
+- Risotto with vegetables - 900 ALL
+- Risotto with seafood - 1000 ALL
+- Ravioli with truffle cream - 1100 ALL
+- Ravioli with small shrimps - 1100 ALL
+- Ravioli four cheese - 1000 ALL
+- Paccheri with seafood - 1200 ALL
+
+#### Soups & Salads
+**Section Heading:** "Soups & Salads"
+**Description:** "Fresh and flavorful accompaniments to your meal."
+
+**Soups:**
+- Fish soup - 600 ALL
+- Vegetable soup - 500 ALL
+
+**Salads:**
+- Bruschetta - 400 ALL
+- Titanic Salad - 700 ALL
+- Arugula Salad - 700 ALL
+- Lettuce Salad - 400 ALL
+- Mixed Salad - 500 ALL
+- Greek Salad - 600 ALL
+- Tuna Salad - 700 ALL
+- Caesar Salad - 700 ALL
+
+#### Red Wines
+**Section Heading:** "Red Wines"
+**Description:** "Carefully selected Italian and local red wines to complement your meal."
+
+- Primitivo Salento 375 ml - 1500 ALL
+- Sirio - 1700 ALL
+- Remole Toscana - 2500 ALL
+- Boscarel - 2500 ALL
+- Primitivo Salento - 2800 ALL
+- Scaia - 2800 ALL
+- Primitivo (Zifa) - 3500 ALL
+- Primitivo Imperio - 4500 ALL
+- Papale - 4500 ALL
+- Anime - 5000 ALL
+- Marina Cvetis Red - 5000 ALL
+- Primitivo di Mandura (Arche) - 5500 ALL
+- Amarone - 6000 ALL
+- Brunelo di Montalcino - 8500 ALL
+- Barolo - 9000 ALL
+- Pelium AL - 2500 ALL
+- Open wine 1lt - 1300 ALL
+- Glass wine - 400 ALL
+
+#### White Wines
+**Section Heading:** "White Wines"
+**Description:** "Refreshing white wines perfect with our seafood selections."
+
+- Gavi 375 ml - 1800 ALL
+- Chardonnay Salento 375 ml - 1500 ALL
+- Sirio - 1700 ALL
+- Pelium AL - 2000 ALL
+- Pinot Grigo - 3000 ALL
+- Chardonnay - 3000 ALL
+- Greko di tufo - 3000 ALL
+- Rose - 3000 ALL
+- Pecorino - 3000 ALL
+- Müller Thurgau - 4200 ALL
+- Gewürztraminer - 4400 ALL
+- Sauvignon Tramin - 4400 ALL
+- Blange - 4200 ALL
+- Donaluce - 5200 ALL
+- Marina Cvetis White - 7000 ALL
+- Quarz - 9000 ALL
+- Open wine 1lt - 1300 ALL
+- Glass wine - 400 ALL
+
+#### Beer & Spirits
+**Section Heading:** "Beer & Spirits"
+**Description:** "A selection of international and local beverages."
+
+**Beer:**
+- Korca - 300 ALL
+- Peroni - 350 ALL
+- Tuborg - 350 ALL
+- Corona - 500 ALL
+- Heineken - 450 ALL
+- Paulaner - 500 ALL
+- Budweiser - 500 ALL
+
+**Spirits:**
+- Vodka Absolut - 350 ALL
+- Gin - 350 ALL
+- Jack Daniels - 400 ALL
+- Chivas Regal - 400 ALL
+- Jagermeister - 350 ALL
+- Johnny Walker - 350 ALL
+- Sambuca - 350 ALL
+- Metaxa - 350 ALL
+- Uzo - 300 ALL
+- Amaro del Capo - 500 ALL
+- Raki / Country brandy - 100 ALL
+
+#### Soft Drinks
+**Section Heading:** "Soft Drinks"
+**Description:** "Refreshing non-alcoholic beverages."
+
+- Ice tea - 250 ALL
+- Coca - Cola - 250 ALL
+- Fanta (orange) - 250 ALL
+- Fanta (exotic) - 250 ALL
+- IVI (apricots) - 250 ALL
+- IVI (without gas) - 250 ALL
+- Lemon Soda - 250 ALL
+- Schweppes - 400 ALL
+- Red Bull - 400 ALL
+- Bravo (strawberry) - 250 ALL
+- Bravo (grape) - 250 ALL
+- Bravo (peach) - 250 ALL
+- Water (0.5 lt) - 150 ALL
+- Water (0.7 lt) - 250 ALL
+
+**Menu Note:** "All prices are in Albanian Lek (ALL). Menu items and prices may change seasonally to ensure we serve only the freshest ingredients."
+
+### Gallery Section
+**Heading:** "Our Gallery"
+**Subheading:** "A glimpse into the Restorant Titanic experience"
+
+**Gallery Categories:**
+- All
+- Dishes
+- Ambience
+
+### Contact & Location Section
+**Heading:** "Find Us"
+
+**Address:**
+```
+Rruga Pavlo Flloko
+Perballe me Hotel Regina City
+Vlore 9401, Albania
+```
+
+**Contact Information:**
+```
+Phone: +355 69 653 9596
+```
+
+**Hours of Operation:**
+```
+Monday: 12:00 PM - 11:30 PM
+Tuesday: 12:00 PM - 11:30 PM
+Wednesday: 12:00 PM - 11:30 PM
+Thursday: 12:00 PM - 11:30 PM
+Friday: 12:00 PM - 10:30 PM
+Saturday: 12:00 PM - 11:30 PM
+Sunday: 12:00 PM - 11:30 PM
+```
+
+**Features:**
+- Accepts Credit Cards
+- Dog Friendly
+- Free Wifi
+- Outdoor Seating
+- Wheelchair Accessible
+- Full Bar with Wine and Beer
+
+### Footer Section
+**Copyright Text:** "© 2025 Restorant Titanic. All Rights Reserved."
+
+**Footer Links:**
+- Privacy Policy
+- Terms of Service
+- Accessibility Statement
+
+**Social Media Text:**
+"Follow us on social media for updates and special offers"
