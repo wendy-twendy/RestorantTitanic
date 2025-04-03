@@ -32,7 +32,7 @@ export default function Menu() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {featuredDishes.map((dish, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="overflow-hidden" style={{ aspectRatio: '3/2' }}>
+                <div className="overflow-hidden" style={{ aspectRatio: '2/3' }}>
                   <img 
                     src={dish.image} 
                     alt={dish.name} 
