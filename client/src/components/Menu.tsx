@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { menuCategories, MenuCategory } from "@/data/menuData";
+import { menuCategories } from "@/data/menuData";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/use-language";
 
@@ -7,15 +7,6 @@ interface FeaturedDish {
   name: string;
   description: string;
   image: string;
-}
-
-interface CategoryTranslation {
-  title: string;
-  description: string;
-}
-
-interface CategoryTranslations {
-  [key: string]: CategoryTranslation;
 }
 
 // Define the translated featured dishes
@@ -32,34 +23,6 @@ const getFeaturedDishes = (t: any): FeaturedDish[] => [
   }
 ];
 
-// Define category translations
-const getCategoryTranslations = (t: any): CategoryTranslations => ({
-  fish: {
-    title: t('menu.categories.fish.title', 'Fish Specialties'),
-    description: t('menu.categories.fish.description', 'Fresh from the Adriatic Sea, our seafood is selected daily to ensure the highest quality.')
-  },
-  appetizers: {
-    title: t('menu.categories.appetizers.title', 'Grilled & Fried Appetizers'),
-    description: t('menu.categories.appetizers.description', 'Perfect starters to share and enjoy with our selection of wines.')
-  },
-  crudo: {
-    title: t('menu.categories.crudo.title', 'Crudo Appetizers'),
-    description: t('menu.categories.crudo.description', 'Fresh raw delicacies prepared in the traditional Mediterranean style.')
-  },
-  pasta: {
-    title: t('menu.categories.pasta.title', 'Pasta & Risotto'),
-    description: t('menu.categories.pasta.description', 'Traditional Italian pastas and risottos with Mediterranean influences.')
-  },
-  soups: {
-    title: t('menu.categories.soups.title', 'Soups & Salads'),
-    description: t('menu.categories.soups.description', 'Fresh and flavorful accompaniments to your meal.')
-  },
-  wines: {
-    title: t('menu.categories.wines.title', 'Wines & Beverages'),
-    description: t('menu.categories.wines.description', 'Carefully selected wines and refreshing beverages to complement your meal.')
-  }
-});
-
 export default function Menu() {
   const { t } = useTranslation();
   const { language } = useLanguage();
@@ -68,18 +31,9 @@ export default function Menu() {
   // Get translated featured dishes
   const featuredDishes = getFeaturedDishes(t);
   
-  // Get category translations
-  const categoryTranslations = getCategoryTranslations(t);
-
-  // Helper function to safely get category translations
-  const getCategoryTranslation = (categoryId: string, field: 'title' | 'description'): string => {
-    if (categoryTranslations[categoryId]) {
-      return categoryTranslations[categoryId][field];
-    }
-    
-    // Fallback to original data
-    const category = menuCategories.find(c => c.id === categoryId);
-    return field === 'title' ? category?.title || categoryId : category?.description || '';
+  // Safely access language-specific content
+  const getLocalizedContent = (content: {en: string, sq: string}) => {
+    return content[language as 'en' | 'sq'];
   };
 
   return (
@@ -129,7 +83,7 @@ export default function Menu() {
                     : "bg-white border-neutral-200 text-neutral-700 hover:bg-neutral-50"
                 } text-sm md:text-base transition-colors font-medium text-center`}
               >
-                {getCategoryTranslation(category.id, 'title')}
+                {getLocalizedContent(category.title)}
               </button>
             ))}
           </div>
@@ -141,10 +95,10 @@ export default function Menu() {
                 <div key={category.id} className="menu-content">
                   <div className="mb-6">
                     <h3 className="text-2xl font-display font-semibold mb-2">
-                      {getCategoryTranslation(category.id, 'title')}
+                      {getLocalizedContent(category.title)}
                     </h3>
                     <p className="text-neutral-600">
-                      {getCategoryTranslation(category.id, 'description')}
+                      {getLocalizedContent(category.description)}
                     </p>
                   </div>
                   
@@ -153,13 +107,13 @@ export default function Menu() {
                       <div key={index} className="menu-item bg-white p-4 rounded-lg shadow-sm border border-neutral-100">
                         <div className="flex justify-between mb-1">
                           <h4 className="font-medium">
-                            {t(`menu.items.${category.id}.${index}.name`, item.name)}
+                            {getLocalizedContent(item.name)}
                           </h4>
                           <span className="font-medium text-accent">{item.price}</span>
                         </div>
                         {item.description && (
                           <p className="text-sm text-neutral-500">
-                            {t(`menu.items.${category.id}.${index}.description`, item.description)}
+                            {getLocalizedContent(item.description)}
                           </p>
                         )}
                       </div>
