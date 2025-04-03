@@ -12,8 +12,8 @@ export default function Home() {
       <Navbar />
       <HeroCarousel />
       <About />
-      <Gallery />
       <Menu />
+      <Gallery />
       <Contact />
       <Footer />
     </div>

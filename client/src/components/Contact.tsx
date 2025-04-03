@@ -1,35 +1,59 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, CheckIcon } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface OperatingHour {
   day: string;
   hours: string;
 }
 
-const operatingHours: OperatingHour[] = [
-  { day: "Monday", hours: "12:00 PM - 11:30 PM" },
-  { day: "Tuesday", hours: "12:00 PM - 11:30 PM" },
-  { day: "Wednesday", hours: "12:00 PM - 11:30 PM" },
-  { day: "Thursday", hours: "12:00 PM - 11:30 PM" },
-  { day: "Friday", hours: "12:00 PM - 10:30 PM" },
-  { day: "Saturday", hours: "12:00 PM - 11:30 PM" },
-  { day: "Sunday", hours: "12:00 PM - 11:30 PM" }
-];
-
-const features = [
-  "Accepts Credit Cards",
-  "Dog Friendly",
-  "Free Wifi",
-  "Outdoor Seating",
-  "Wheelchair Accessible",
-  "Full Bar with Wine and Beer"
-];
-
 export default function Contact() {
+  const { language, t } = useLanguage();
+  
+  // Bilingual operating hours
+  const operatingHours: OperatingHour[] = language === 'en' 
+    ? [
+        { day: "Monday", hours: "12:00 PM - 11:30 PM" },
+        { day: "Tuesday", hours: "12:00 PM - 11:30 PM" },
+        { day: "Wednesday", hours: "12:00 PM - 11:30 PM" },
+        { day: "Thursday", hours: "12:00 PM - 11:30 PM" },
+        { day: "Friday", hours: "12:00 PM - 10:30 PM" },
+        { day: "Saturday", hours: "12:00 PM - 11:30 PM" },
+        { day: "Sunday", hours: "12:00 PM - 11:30 PM" }
+      ]
+    : [
+        { day: "E Hënë", hours: "12:00 - 23:30" },
+        { day: "E Martë", hours: "12:00 - 23:30" },
+        { day: "E Mërkurë", hours: "12:00 - 23:30" },
+        { day: "E Enjte", hours: "12:00 - 23:30" },
+        { day: "E Premte", hours: "12:00 - 22:30" },
+        { day: "E Shtunë", hours: "12:00 - 23:30" },
+        { day: "E Diel", hours: "12:00 - 23:30" }
+      ];
+
+  // Bilingual features
+  const features = language === 'en'
+    ? [
+        "Accepts Credit Cards",
+        "Dog Friendly",
+        "Free Wifi",
+        "Outdoor Seating",
+        "Wheelchair Accessible",
+        "Full Bar with Wine and Beer"
+      ]
+    : [
+        "Pranon Karta Krediti",
+        "Miqësor me Qentë",
+        "Wifi Falas",
+        "Ulëse në Ambient të Jashtëm",
+        "I Aksesueshëm për Karrocat",
+        "Bar i Plotë me Verë dhe Birrë"
+      ];
+
   return (
     <section id="contact" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 section-heading">Find Us</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 section-heading">{t('contact.title')}</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Info */}
@@ -37,7 +61,7 @@ export default function Contact() {
             <Card>
               <CardContent className="p-6">
                 <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold mb-2">Address</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.address')}</h3>
                   <p className="text-neutral-600">
                     Rruga Pavllo Floqi<br />
                     Perballe me Hotel Regina City<br />
@@ -46,7 +70,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold mb-2">Contact Information</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.phone')}</h3>
                   <p className="text-neutral-600 flex items-center">
                     <Phone className="h-5 w-5 mr-2 text-accent" />
                     <a href="tel:+355696539596" className="hover:text-accent transition-colors">
@@ -56,7 +80,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold mb-2">Hours of Operation</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.hours')}</h3>
                   <ul className="space-y-2 text-neutral-600">
                     {operatingHours.map((item, index) => (
                       <li key={index} className="flex justify-between">
@@ -68,7 +92,9 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-display font-semibold mb-2">Features</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">
+                    {language === 'en' ? 'Features' : 'Veçoritë'}
+                  </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-center">
