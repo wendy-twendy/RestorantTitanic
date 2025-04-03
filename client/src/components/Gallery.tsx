@@ -9,67 +9,79 @@ interface GalleryImage {
   category: "dishes" | "ambience";
 }
 
-// Gallery image data
+// Gallery image data using actual photos from the restaurant
 const galleryImages: GalleryImage[] = [
+  // Dish photos
   {
-    src: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Delicious seafood pasta",
+    src: "/images/dish-1.jpg",
+    alt: "Seafood pasta with clams and mussels",
     category: "dishes"
   },
   {
-    src: "https://images.unsplash.com/photo-1579684947550-22e945225d9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Fresh fish dish",
+    src: "/images/dish-2.jpg",
+    alt: "Fresh Mediterranean seafood platter",
     category: "dishes"
   },
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Restaurant interior",
+    src: "/images/dish-3.jpg",
+    alt: "Grilled fish with herbs",
+    category: "dishes"
+  },
+  {
+    src: "/images/dish-4.jpg",
+    alt: "Seafood risotto with prawns",
+    category: "dishes"
+  },
+  {
+    src: "/images/dish-5.jpg",
+    alt: "Grilled calamari with vegetables",
+    category: "dishes"
+  },
+  {
+    src: "/images/dish-6.jpg",
+    alt: "Traditional Italian pasta dish",
+    category: "dishes"
+  },
+  {
+    src: "/images/dish-7.jpg",
+    alt: "Fresh fish with citrus garnish",
+    category: "dishes"
+  },
+  {
+    src: "/images/dish-8.jpg",
+    alt: "Seafood soup with mussels",
+    category: "dishes"
+  },
+  // Ambience photos
+  {
+    src: "/images/ambience-2.jpg",
+    alt: "Restorant Titanic interior view",
     category: "ambience"
   },
   {
-    src: "https://images.unsplash.com/photo-1532980400857-e8d9d275d858?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Grilled seafood platter",
-    category: "dishes"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Dining area with sea view",
+    src: "/images/ambience-3.jpg",
+    alt: "Dining area with elegant setting",
     category: "ambience"
   },
   {
-    src: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Italian pasta dish",
-    category: "dishes"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Restaurant terrace",
+    src: "/images/ambience-4.jpg",
+    alt: "Oceanfront terrace dining",
     category: "ambience"
   },
   {
-    src: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Seafood soup",
-    category: "dishes"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Mediterranean fish dish",
-    category: "dishes"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Waterfront restaurant view",
+    src: "/images/ambience-5.jpg",
+    alt: "Wine display in the restaurant",
     category: "ambience"
   },
   {
-    src: "https://images.unsplash.com/photo-1579247386671-481a5cb894ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Fine dining experience",
+    src: "/images/ambience-6.jpg",
+    alt: "Seaside dining with sunset view",
     category: "ambience"
   },
   {
-    src: "https://images.unsplash.com/photo-1536489885071-87983c3e2859?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    alt: "Grilled whole fish",
-    category: "dishes"
+    src: "/images/ambience-7.jpg",
+    alt: "Outdoor terrace with sea view",
+    category: "ambience"
   }
 ];
 

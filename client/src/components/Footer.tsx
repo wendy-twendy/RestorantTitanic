@@ -17,7 +17,7 @@ export default function Footer() {
             <p className="flex items-start mb-2">
               <MapPin className="h-5 w-5 mr-2 text-accent mt-0.5" />
               <span>
-                Rruga Pavlo Flloko<br />
+                Rruga Pavllo Floqi<br />
                 Vlore 9401, Albania
               </span>
             </p>

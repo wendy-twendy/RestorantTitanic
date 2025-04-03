@@ -2,42 +2,57 @@ import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 
+// Define hero images
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    url: "/images/ambience-6.jpg",
+    alt: "Restorant Titanic dining area with sea view"
+  },
+  {
+    url: "/images/dish-9.jpg",
     alt: "Restorant Titanic seafood dish"
   },
   {
-    url: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+    url: "/images/ambience-2.jpg",
     alt: "Restorant Titanic interior"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1610631787813-9eeb1a2386cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-    alt: "Dining at Restorant Titanic"
   }
 ];
 
 export default function HeroCarousel() {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [api, setApi] = useState<any>(null);
+  const [current, setCurrent] = useState(0);
 
-  // Auto-advance carousel
+  // Handle slide changes
   useEffect(() => {
+    if (!api) return;
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+    
+    // Auto-advance carousel
     const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % heroImages.length);
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api.scrollTo(0);
+      }
     }, 5000);
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      api.off("select", onSelect);
+      clearInterval(interval);
+    };
+  }, [api]);
 
   return (
     <section id="home" className="relative h-screen overflow-hidden">
-      <Carousel
-        className="w-full h-full"
-        selectedIndex={activeSlide}
-        setSelectedIndex={setActiveSlide}
-        opts={{
-          loop: true,
-        }}
+      <Carousel 
+        className="w-full h-full" 
+        opts={{ loop: true }}
+        setApi={setApi}
       >
         <CarouselContent className="h-full">
           {heroImages.map((image, index) => (
@@ -75,9 +90,9 @@ export default function HeroCarousel() {
           {heroImages.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActiveSlide(index)}
+              onClick={() => api?.scrollTo(index)}
               className={`w-3 h-3 rounded-full transition ${
-                index === activeSlide ? "bg-accent opacity-100" : "bg-white opacity-50 hover:opacity-75"
+                index === current ? "bg-accent opacity-100" : "bg-white opacity-50 hover:opacity-75"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

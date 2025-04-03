@@ -1,0 +1,129 @@
+Section,Albanian name,English name,Price
+Red Wine,Primitivo Salento 375 ml,Primitivo Salento 375 ml,1500.0
+Red Wine,Sirio,Sirio,1700.0
+Red Wine,Remole Toscana,Remole Toscana,2500.0
+Red Wine,Boscarel,Boscarel,2500.0
+Red Wine,Primitivo Salento,Primitivo Salento,2800.0
+Red Wine,Scaia,Scaia,2800.0
+Red Wine,Primitivo (Zifa),Primitivo (Zifa),3500.0
+Red Wine,Primitivo Imperio,Primitivo Imperio,4500.0
+Red Wine,Papale,Papale,4500.0
+Red Wine,Anime,Anime,5000.0
+Red Wine,Marina Cvetis Red,Marina Cvetis Red,5000.0
+Red Wine,Primitivo di Mandura (Arche),Primitivo di Mandura (Arche),5500.0
+Red Wine,Amarone,Amarone,6000.0
+Red Wine,Brunelo di Montalcino,Brunelo di Montalcino,8500.0
+Red Wine,Barolo,Barolo,9000.0
+Red Wine,Pelium AL,Pelium AL,2500.0
+Red Wine,Verë e hapur,Open wine 1lt,1300.0
+Red Wine,Verë ne gotë,Glass wine,400.0
+White Wine,Gavi 375 ml,Gavi 375 ml,1800.0
+White Wine,Chardonnay Salento 375 ml,Chardonnay Salento 375 ml,1500.0
+White Wine,Sirio,Sirio,1700.0
+White Wine,Pelium AL,Pelium AL,2000.0
+White Wine,Pinot Grigo,Pinot Grigo,3000.0
+White Wine,Chardonnay,Chardonnay,3000.0
+White Wine,Greko di tufo,Greko di tufo,3000.0
+White Wine,Rose,Rose,3000.0
+White Wine,Pecorino,Pecorino,3000.0
+White Wine,Müller Thurgau,Müller Thurgau,4200.0
+White Wine,Gewürztraminer,Gewürztraminer,4400.0
+White Wine,Sauvignon Tramin,Sauvignon Tramin,4400.0
+White Wine,Blange,Blange,4200.0
+White Wine,Donaluce,Donaluce,5200.0
+White Wine,Marina Cvetis White,Marina Cvetis White,7000.0
+White Wine,Quarz,Quarz,9000.0
+White Wine,Verë e hapur,Open wine 1lt,1300.0
+White Wine,Verë ne gotë,Glass wine,400.0
+Beer,Korca,Korca,300.0
+Beer,Peroni,Peroni,350.0
+Beer,Tuborg,Tuborg,350.0
+Beer,Corona,Corona,500.0
+Beer,Heineken,Heineken,450.0
+Beer,Paulaner,Paulaner,500.0
+Beer,Budweiser,Budweiser,500.0
+Alcohol,Vodka Absolut,Vodka Absolut,350.0
+Alcohol,Gin,Gin,350.0
+Alcohol,Jack Daniels,Jack Daniels,400.0
+Alcohol,Chivas Regal,Chivas Regal,400.0
+Alcohol,Jagermeister,Jagermeister,350.0
+Alcohol,Johnny Walker,Johnny Walker,350.0
+Alcohol,Sambuca,Sambuca,350.0
+Alcohol,Metaxa,Metaxa,350.0
+Alcohol,Uzo,Uzo,300.0
+Alcohol,Amaro del Capo,Amaro del Capo,500.0
+Alcohol,Raki / Country brandy,Raki / Country brandy,100.0
+Soft Drinks,Çaj i ftohtë,Ice tea,250.0
+Soft Drinks,Coca - Cola,Coca - Cola,250.0
+Soft Drinks,Fanta (portokall),Fanta (orange),250.0
+Soft Drinks,Fanta (ekzotike),Fanta (exotic),250.0
+Soft Drinks,IVI (kajsi),IVI (apricots),250.0
+Soft Drinks,IVI (pa gaz),IVI (without gas),250.0
+Soft Drinks,Oran,Lemon Soda,250.0
+Soft Drinks,Schweppes,Schweppes,400.0
+Soft Drinks,Red Bull,Red Bull,400.0
+Soft Drinks,Bravo (luleshtrydhe),Bravo (strawberry),250.0
+Soft Drinks,Bravo (rrushi),Bravo (grape),250.0
+Soft Drinks,Bravo (pjeshkë),Bravo (peach),250.0
+Soft Drinks,Ujë (0.5 lt),Water (0.5 lt),150.0
+Soft Drinks,Ujë (0.7 lt),Water (0.7 lt),250.0
+Fish,Peshk (cilësia I),Fish (I quality),7000.0
+Fish,Peshk (cilësia II),Fish (II quality),5500.0
+Fish,Peshk (cilësia III),Fish (III quality),4500.0
+Fish,Peshk në furrë me perime,Oven baked fish with vegetables,7000.0
+Fish,Karkalec i egër zgare,Grilled wild shrimps (0.3 kg),2100.0
+Fish,Skampi (cilësia I),"Scampi (I quality, 0.3 kg)",2100.0
+Fish,Barbun i kuq (cilësia I),Red goat-fish (I quality),5000.0
+Fish,Salmon zgare,Grilled salmon (0.3 kg),1800.0
+Fish,Peshk krudo sipas cilësisë,Raw fish according to the quality,
+Fish,Aragost,Lobster (1 kg),14000.0
+Fish,Gjinkallë,Sea cicada (1 kg),14000.0
+Grilled/Fried Appetizers,Oktapod zgare,Grilled octopus,1900.0
+Grilled/Fried Appetizers,Midhje shote,Sauteed mussels,800.0
+Grilled/Fried Appetizers,Karkalec shote,Sauteed shrimps (0.2 kg),1400.0
+Grilled/Fried Appetizers,Miks fritur,Mixed fried seafood,1500.0
+Grilled/Fried Appetizers,Miks fruta deti në zgare (0.3 kg),Mixed grilled seafood,1500.0
+Grilled/Fried Appetizers,Miks fruta deti në zgare (0.5 kg),Mixed grilled seafood,2800.0
+Grilled/Fried Appetizers,Karkalec fritur,Fried shrimps,1500.0
+Grilled/Fried Appetizers,Kallamar fritur,Fried calamari,1500.0
+Grilled/Fried Appetizers,Karkalec sakanaki,Shrimps saganaki,1300.0
+Grilled/Fried Appetizers,Sepie në zgare,Grilled squid,1800.0
+Grilled/Fried Appetizers,Kapesante,A Capesante (1 piece),400.0
+Grilled/Fried Appetizers,Qofte peshku,Fish balls,1000.0
+Grilled/Fried Appetizers,Qofte gafore,Crab balls,1000.0
+Grilled/Fried Appetizers,Antipastë e vogël,Small appetizer (2 pax),2750.0
+Grilled/Fried Appetizers,Antipastë e madhe,Large appetizer (4 pax),5500.0
+Crudo Appetizers,Karkalec krudo,Crude shrimps (0.2 kg),1400.0
+Crudo Appetizers,Salmon krudo,Crude salmon (0.2 kg),1500.0
+Crudo Appetizers,Skampi krudo,Crude scampi (0.3 kg),2100.0
+Crudo Appetizers,Karpaço oktapodi,Octapus carpaccio (0.3 kg),1500.0
+Crudo Appetizers,Krudo (2 pax),Crude (2 pax),2750.0
+Crudo Appetizers,Krudo (4 pax),Crude (4 pax),5500.0
+Crudo Appetizers,Acuke e marinuar,Marinated acuge,1000.0
+Crudo Appetizers,Sallatë Oktapodi,Octapus Salad,1800.0
+Crudo Appetizers,Sallatë fruta deti,Salad seafood,1500.0
+Pasta,Linguine Salcë,Linguine with tomato sauce,600.0
+Pasta,Linguine gjalpë,Linguine with butter,500.0
+Pasta,Linguine Bolonjeze,Linguine Bolognese,1000.0
+Pasta,Linguine me karkalec i vogël,Linguine with small shrimps,1000.0
+Pasta,Linguine fruta deti,Linguine with seafood,1000.0
+Pasta,Linguine Skampi,Linguine with scampi,1200.0
+Pasta,Linguine me karkalec i madh,Linguine with first quality shrimps,1200.0
+Pasta,Pene karkalec kungull,Penne with shrimps and zucchini,1000.0
+Pasta,Pene pana proshutë,Penne pana with ham,800.0
+Pasta,Rizoto perime,Risotto with vegetables,900.0
+Pasta,Rizoto fruta deti,Risotto with seafood,1000.0
+Pasta,Ravioli krem tartufi,Ravioli with truffle cream,1100.0
+Pasta,Ravioli karkalec i vogël,Ravioli with small shrimps,1100.0
+Pasta,Ravioli 4 djathrat,Ravioli four cheese,1000.0
+Pasta,Pakeri me fruta deti,Paccheri with seafood,1200.0
+Soup,Supë peshku,Fish soup,600.0
+Soup,Supë perime,Vegetable soup,500.0
+Salad,Brusketa,Bruschetta,400.0
+Salad,Sallatë Titanic,Titanic Salad,700.0
+Salad,Sallatë Rukola,Arugula Salad,700.0
+Salad,Sallatë Jeshile,Lettuce Salad,400.0
+Salad,Sallatë Miks,Mixed Salad,500.0
+Salad,Sallatë Greke,Greek Salad,600.0
+Salad,Sallatë Tonë,Tuna Salad,700.0
+Salad,Sallatë Cezar,Caesar Salad,700.0

@@ -39,7 +39,7 @@ export default function Contact() {
                 <div className="mb-8">
                   <h3 className="text-xl font-display font-semibold mb-2">Address</h3>
                   <p className="text-neutral-600">
-                    Rruga Pavlo Flloko<br />
+                    Rruga Pavllo Floqi<br />
                     Perballe me Hotel Regina City<br />
                     Vlore 9401, Albania
                   </p>
@@ -86,7 +86,7 @@ export default function Contact() {
           <div className="h-full min-h-[400px]">
             <div className="h-full rounded-lg shadow-md overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.638453064319!2d19.495735415361578!3d40.628290979342385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDM3JzQxLjgiTiAxOcKwMjknNDkuMSJF!5e0!3m2!1sen!2sus!4v1625584362583!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3023.5105842044723!2d19.476720315415103!3d40.72906437932969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134531ee0309bd89%3A0x96e1ddf76e880d15!2sRruga%20Pavllo%20Floqi%2C%20Vlor%C3%AB%2C%20Albania!5e0!3m2!1sen!2sus!4v1649235978432!5m2!1sen!2sus"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }}
@@ -94,6 +94,7 @@ export default function Contact() {
                 loading="lazy"
                 title="Restaurant location on map"
                 aria-label="Map showing Restorant Titanic location"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>

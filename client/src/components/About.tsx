@@ -47,8 +47,8 @@ export default function About() {
           <div className="space-y-6">
             <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Restorant Titanic interior" 
+                src="/images/ambience-4.jpg" 
+                alt="Restorant Titanic oceanfront view" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -57,16 +57,16 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-40 overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
-                  alt="Delicious seafood dish" 
+                  src="/images/dish-2.jpg" 
+                  alt="Fresh seafood platter" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
               <div className="relative h-40 overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" 
-                  alt="Restaurant ambiance" 
+                  src="/images/ambience-7.jpg" 
+                  alt="Outdoor dining terrace" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
