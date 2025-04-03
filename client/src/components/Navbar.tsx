@@ -33,10 +33,8 @@ export default function Navbar() {
   return (
     <header className={`fixed w-full bg-white shadow-md z-40 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/">
-          <a className="flex items-center">
+        <Link href="/" className="flex items-center">
             <h1 className="text-2xl font-display font-bold text-primary">Restorant Titanic</h1>
-          </a>
         </Link>
         
         {/* Desktop Navigation */}
