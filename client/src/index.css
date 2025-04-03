@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom font families */
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 98%;
+    --foreground: 222 47% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 20%;
+    --primary: 222 47% 20%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 20%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 15 83% 62%; /* Warm accent color */
+    --accent-foreground: 222 47% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 47% 20%;
+    --radius: 0.5rem;
+  }
+}
+
+/* Font family classes */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Section heading styles with accent bar */
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: hsl(var(--accent));
+  margin: 12px auto 0;
+}
+
+.section-heading-left::after {
+  margin: 12px 0 0;
+}
+
+/* Menu Item Styles */
+.menu-item:not(:last-child) {
+  @apply border-b border-neutral-200 pb-4 mb-4;
+}
+
+/* Gallery item hover effect */
+.gallery-item {
+  transition: all 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
