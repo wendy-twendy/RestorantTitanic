@@ -1,8 +1,11 @@
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import { SiTripadvisor } from "react-icons/si";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
@@ -10,16 +13,16 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-display font-bold mb-4">Restorant Titanic</h3>
             <p className="mb-4 text-primary-100">Authentic Italian & Fresh Seafood on the Adriatic Coast</p>
-            <p className="text-sm text-primary-200">© 2025 Restorant Titanic. All Rights Reserved.</p>
+            <p className="text-sm text-primary-200">{t('footer.copyright')}</p>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('contact.title')}</h4>
             <p className="flex items-start mb-2">
               <MapPin className="h-5 w-5 mr-2 text-accent mt-0.5" />
               <span>
                 Rruga Pavllo Floqi<br />
-                Vlore 9401, Albania
+                {t('footer.address')}
               </span>
             </p>
             <p className="flex items-center mb-2">

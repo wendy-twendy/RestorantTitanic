@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import StoryPage from "@/pages/Story";
+import { LanguageProvider } from "./hooks/use-language";
+import './lib/i18n'; // Import i18n configuration
 
 function Router() {
   return (
@@ -19,8 +21,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <LanguageProvider>
+        <Router />
+        <Toaster />
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }

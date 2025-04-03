@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { menuCategories } from "@/data/menuData";
+import { useTranslation } from "react-i18next";
 
 // Featured dishes with actual images
 const featuredDishes = [
@@ -16,14 +17,15 @@ const featuredDishes = [
 ];
 
 export default function Menu() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("fish");
 
   return (
     <section id="menu" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 section-heading">Our Menu</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 section-heading">{t('menu.title')}</h2>
         <p className="text-center text-neutral-600 mb-8 max-w-xl mx-auto">
-          Savor the authentic flavors of the Mediterranean
+          {t('menu.description')}
         </p>
         
         {/* Featured Dishes */}

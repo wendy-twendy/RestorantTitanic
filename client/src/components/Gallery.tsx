@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from "react-i18next";
 
 interface GalleryImage {
   src: string;
@@ -96,6 +97,7 @@ const galleryImages: GalleryImage[] = [
 type FilterCategory = "all" | "dishes" | "ambience";
 
 export default function Gallery() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<FilterCategory>("all");
   const [openLightbox, setOpenLightbox] = useState(false);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
@@ -113,8 +115,12 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 section-heading">Our Gallery</h2>
-        <p className="text-center text-neutral-600 mb-12 max-w-xl mx-auto">A glimpse into the Restorant Titanic experience</p>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4 section-heading">
+          {t('gallery.title')}
+        </h2>
+        <p className="text-center text-neutral-600 mb-12 max-w-xl mx-auto">
+          {t('gallery.description')}
+        </p>
         
         {/* Gallery Filters */}
         <div className="flex flex-wrap justify-center mb-8">
@@ -123,21 +129,21 @@ export default function Gallery() {
             onClick={() => setFilter("all")}
             className={`mx-1 ${filter === "all" ? "bg-primary text-white" : "border-primary-200 text-primary"}`}
           >
-            All
+            {t('gallery.filter.all')}
           </Button>
           <Button 
             variant={filter === "dishes" ? "default" : "outline"}
             onClick={() => setFilter("dishes")}
             className={`mx-1 ${filter === "dishes" ? "bg-primary text-white" : "border-primary-200 text-primary"}`}
           >
-            Dishes
+            {t('gallery.filter.dishes')}
           </Button>
           <Button 
             variant={filter === "ambience" ? "default" : "outline"}
             onClick={() => setFilter("ambience")}
             className={`mx-1 ${filter === "ambience" ? "bg-primary text-white" : "border-primary-200 text-primary"}`}
           >
-            Ambience
+            {t('gallery.filter.ambience')}
           </Button>
         </div>
         

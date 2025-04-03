@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link } from "wouter";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const navLinks = [
+// Default nav labels
+const defaultNavLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#menu", label: "Menu" },
@@ -12,8 +15,18 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  // Define nav links with translations and fallbacks
+  const navLinks = [
+    { href: "#home", label: t("navbar.home", "Home") },
+    { href: "#about", label: t("navbar.about", "About") },
+    { href: "#menu", label: t("navbar.menu", "Menu") },
+    { href: "#gallery", label: t("navbar.gallery", "Gallery") },
+    { href: "#contact", label: t("navbar.contact", "Contact") },
+  ];
 
   // Handle scroll effect for navbar
   useEffect(() => {
@@ -38,8 +51,8 @@ export default function Navbar() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-6">
+        <nav className="hidden md:flex items-center">
+          <ul className="flex space-x-6 mr-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a 
@@ -51,33 +64,37 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+          <LanguageSwitcher />
         </nav>
         
         {/* Mobile Navigation */}
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <button aria-label="Open menu" className="focus:outline-none">
-              <Menu className="h-6 w-6 text-primary" />
-            </button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[250px] sm:w-[300px]">
-            <nav className="mt-8">
-              <ul className="space-y-4">
-                {navLinks.map((link) => (
-                  <li key={link.href}>
-                    <a 
-                      href={link.href} 
-                      className="block py-2 font-medium hover:text-accent transition-colors"
-                      onClick={handleNavClick}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </SheetContent>
-        </Sheet>
+        <div className="flex items-center md:hidden">
+          <LanguageSwitcher />
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="ml-2">
+              <button aria-label="Open menu" className="focus:outline-none">
+                <Menu className="h-6 w-6 text-primary" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[250px] sm:w-[300px]">
+              <nav className="mt-8">
+                <ul className="space-y-4">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <a 
+                        href={link.href} 
+                        className="block py-2 font-medium hover:text-accent transition-colors"
+                        onClick={handleNavClick}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

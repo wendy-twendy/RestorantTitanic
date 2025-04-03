@@ -1,12 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, CheckIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface OperatingHour {
   day: string;
   hours: string;
 }
 
-const operatingHours: OperatingHour[] = [
+// Default values for when translations aren't loaded yet
+const defaultOperatingHours: OperatingHour[] = [
   { day: "Monday", hours: "12:00 PM - 11:30 PM" },
   { day: "Tuesday", hours: "12:00 PM - 11:30 PM" },
   { day: "Wednesday", hours: "12:00 PM - 11:30 PM" },
@@ -16,7 +18,7 @@ const operatingHours: OperatingHour[] = [
   { day: "Sunday", hours: "12:00 PM - 11:30 PM" }
 ];
 
-const features = [
+const defaultFeatures: string[] = [
   "Accepts Credit Cards",
   "Dog Friendly",
   "Free Wifi",
@@ -26,10 +28,18 @@ const features = [
 ];
 
 export default function Contact() {
+  const { t } = useTranslation();
+  
+  // Get operating hours and features from translations with fallbacks
+  const operatingHours = t('contact.operatingHours', { returnObjects: true }) as OperatingHour[] || defaultOperatingHours;
+  const features = t('contact.features', { returnObjects: true }) as string[] || defaultFeatures;
+
   return (
     <section id="contact" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 section-heading">Find Us</h2>
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12 section-heading">
+          {t('contact.title', 'Find Us')}
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Info */}
@@ -37,16 +47,16 @@ export default function Contact() {
             <Card>
               <CardContent className="p-6">
                 <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold mb-2">Address</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.addressTitle', 'Address')}</h3>
                   <p className="text-neutral-600">
                     Rruga Pavllo Floqi<br />
-                    Perballe me Hotel Regina City<br />
-                    Vlore 9401, Albania
+                    {t('contact.addressLine2', 'Perballe me Hotel Regina City')}<br />
+                    {t('contact.addressLine3', 'Vlore 9401, Albania')}
                   </p>
                 </div>
                 
                 <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold mb-2">Contact Information</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.contactInfoTitle', 'Contact Information')}</h3>
                   <p className="text-neutral-600 flex items-center">
                     <Phone className="h-5 w-5 mr-2 text-accent" />
                     <a href="tel:+355696539596" className="hover:text-accent transition-colors">
@@ -56,9 +66,9 @@ export default function Contact() {
                 </div>
                 
                 <div className="mb-8">
-                  <h3 className="text-xl font-display font-semibold mb-2">Hours of Operation</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.hoursTitle', 'Hours of Operation')}</h3>
                   <ul className="space-y-2 text-neutral-600">
-                    {operatingHours.map((item, index) => (
+                    {Array.isArray(operatingHours) && operatingHours.map((item, index) => (
                       <li key={index} className="flex justify-between">
                         <span>{item.day}:</span>
                         <span>{item.hours}</span>
@@ -68,9 +78,9 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-display font-semibold mb-2">Features</h3>
+                  <h3 className="text-xl font-display font-semibold mb-2">{t('contact.featuresTitle', 'Features')}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {features.map((feature, index) => (
+                    {Array.isArray(features) && features.map((feature, index) => (
                       <div key={index} className="flex items-center">
                         <CheckIcon className="h-5 w-5 mr-2 text-accent" />
                         <span className="text-neutral-600">{feature}</span>

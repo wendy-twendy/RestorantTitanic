@@ -1,0 +1,78 @@
+{
+  "language": {
+    "en": "English",
+    "sq": "Albanian"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "Our Story",
+    "description1": "Welcome to Restorant Titanic, a premier dining destination in Vlore that brings together authentic Italian traditions and the freshest seafood from the Adriatic Sea.",
+    "description2": "Established with a passion for exceptional cuisine and hospitality, our restaurant offers a warm, inviting atmosphere where every meal becomes a memorable experience with breathtaking views of the Adriatic coast.",
+    "readMore": "Read Our Full Story",
+    "whyChooseUs": "Why Choose Us",
+    "features": [
+      "Breathtaking waterfront views",
+      "Authentic Italian and Mediterranean cuisine",
+      "Fresh, locally-sourced seafood",
+      "Warm, attentive service",
+      "Relaxing atmosphere perfect for any occasion"
+    ]
+  },
+  "menu": {
+    "title": "Our Menu",
+    "description": "Savor the authentic flavors of the Mediterranean",
+    "signatureDishes": "Signature Dishes",
+    "allPricesNote": "All prices are in Albanian Lek (ALL). Menu items and prices may change seasonally to ensure we serve only the freshest ingredients."
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "description": "A glimpse into the Restorant Titanic experience",
+    "filter": {
+      "all": "All",
+      "dishes": "Dishes",
+      "ambience": "Ambience"
+    }
+  },
+  "contact": {
+    "title": "Find Us",
+    "addressTitle": "Address",
+    "addressLine2": "Perballe me Hotel Regina City",
+    "addressLine3": "Vlore 9401, Albania",
+    "contactInfoTitle": "Contact Information",
+    "hoursTitle": "Hours of Operation",
+    "featuresTitle": "Features",
+    "operatingHours": [
+      { "day": "Monday", "hours": "12:00 PM - 11:30 PM" },
+      { "day": "Tuesday", "hours": "12:00 PM - 11:30 PM" },
+      { "day": "Wednesday", "hours": "12:00 PM - 11:30 PM" },
+      { "day": "Thursday", "hours": "12:00 PM - 11:30 PM" },
+      { "day": "Friday", "hours": "12:00 PM - 10:30 PM" },
+      { "day": "Saturday", "hours": "12:00 PM - 11:30 PM" },
+      { "day": "Sunday", "hours": "12:00 PM - 11:30 PM" }
+    ],
+    "features": [
+      "Accepts Credit Cards",
+      "Dog Friendly",
+      "Free Wifi",
+      "Outdoor Seating",
+      "Wheelchair Accessible", 
+      "Full Bar with Wine and Beer"
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 Restorant Titanic. All Rights Reserved.",
+    "address": "Vlore 9401, Albania",
+    "followUs": "Follow us on social media for updates and special offers",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "accessibility": "Accessibility Statement"
+    }
+  }
+}

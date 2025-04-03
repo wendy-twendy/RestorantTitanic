@@ -1,0 +1,78 @@
+{
+  "language": {
+    "en": "Anglisht",
+    "sq": "Shqip"
+  },
+  "navbar": {
+    "home": "Kryefaqja",
+    "about": "Rreth Nesh",
+    "menu": "Menu",
+    "gallery": "Galeria",
+    "contact": "Kontakt"
+  },
+  "about": {
+    "title": "Historia Jonë",
+    "description1": "Mirësevini në Restorant Titanic, një destinacion kryesor për darkën në Vlorë që sjell bashkë traditat autentike italiane dhe ushqimet më të freskëta të detit nga deti Adriatik.",
+    "description2": "Themeluar me pasion për kuzhinë dhe pritje të jashtëzakonshme, restoranti ynë ofron një atmosferë të ngrohtë dhe mikpritëse ku çdo vakt bëhet një përvojë e paharrueshme me pamje mahnitëse të bregdetit të Adriatikut.",
+    "readMore": "Lexo Historinë e Plotë",
+    "whyChooseUs": "Pse të na Zgjidhni",
+    "features": [
+      "Pamje mahnitëse të bregdetit",
+      "Kuzhinë autentike italiane dhe mesdhetare",
+      "Ushqime deti të freskëta, të siguruara lokalisht",
+      "Shërbim i ngrohtë dhe i vëmendshëm",
+      "Atmosferë relaksuese e përsosur për çdo rast"
+    ]
+  },
+  "menu": {
+    "title": "Menu Jonë",
+    "description": "Shijoni shijët autentike të Mesdheut",
+    "signatureDishes": "Pjatat tona të Veçanta",
+    "allPricesNote": "Të gjitha çmimet janë në Lek shqiptar (ALL). Artikujt e menusë dhe çmimet mund të ndryshojnë sezonalisht për të siguruar që shërbejmë vetëm përbërësit më të freskët."
+  },
+  "gallery": {
+    "title": "Galeria Jonë",
+    "description": "Një vështrim në përvojën e Restorant Titanic",
+    "filter": {
+      "all": "Të Gjitha",
+      "dishes": "Gatimet",
+      "ambience": "Ambienti"
+    }
+  },
+  "contact": {
+    "title": "Na Gjeni",
+    "addressTitle": "Adresa",
+    "addressLine2": "Përballë me Hotel Regina City",
+    "addressLine3": "Vlorë 9401, Shqipëri",
+    "contactInfoTitle": "Informacioni i Kontaktit",
+    "hoursTitle": "Orari i Punës",
+    "featuresTitle": "Veçoritë",
+    "operatingHours": [
+      { "day": "E Hënë", "hours": "12:00 - 23:30" },
+      { "day": "E Martë", "hours": "12:00 - 23:30" },
+      { "day": "E Mërkurë", "hours": "12:00 - 23:30" },
+      { "day": "E Enjte", "hours": "12:00 - 23:30" },
+      { "day": "E Premte", "hours": "12:00 - 22:30" },
+      { "day": "E Shtunë", "hours": "12:00 - 23:30" },
+      { "day": "E Diel", "hours": "12:00 - 23:30" }
+    ],
+    "features": [
+      "Pranon Karta Krediti",
+      "Miqësor për Qentë",
+      "Wi-Fi Falas",
+      "Ulëse në Ambiente të Hapura",
+      "I Aksesueshëm për Karrige me Rrota",
+      "Bar i Plotë me Verë dhe Birrë"
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 Restorant Titanic. Të Gjitha të Drejtat të Rezervuara.",
+    "address": "Vlorë 9401, Shqipëri",
+    "followUs": "Na ndiqni në mediat sociale për përditësime dhe oferta speciale",
+    "links": {
+      "privacy": "Politika e Privatësisë",
+      "terms": "Kushtet e Shërbimit",
+      "accessibility": "Deklarata e Aksesibilitetit"
+    }
+  }
+}
