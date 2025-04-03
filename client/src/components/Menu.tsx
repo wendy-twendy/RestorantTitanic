@@ -2,6 +2,14 @@ import { useState } from "react";
 import { menuCategories } from "@/data/menuData";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/hooks/use-language";
+import { useIsMobile } from "@/hooks/use-mobile";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface FeaturedDish {
   name: string;
@@ -27,6 +35,7 @@ export default function Menu() {
   const { t } = useTranslation();
   const { language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("fish");
+  const isMobile = useIsMobile();
   
   // Get translated featured dishes
   const featuredDishes = getFeaturedDishes(t);
@@ -51,23 +60,52 @@ export default function Menu() {
           <h3 className="text-2xl font-display font-semibold text-center mb-8">
             {t('menu.signatureDishes', 'Signature Dishes')}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {featuredDishes.map((dish, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                <div className="overflow-hidden" style={{ aspectRatio: '2/3' }}>
-                  <img 
-                    src={dish.image} 
-                    alt={dish.name} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
+          
+          {isMobile ? (
+            <div className="relative max-w-md mx-auto px-4">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {featuredDishes.map((dish, index) => (
+                    <CarouselItem key={index}>
+                      <div className="bg-white rounded-lg overflow-hidden shadow-md">
+                        <div className="overflow-hidden" style={{ aspectRatio: '2/3' }}>
+                          <img 
+                            src={dish.image} 
+                            alt={dish.name} 
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h4 className="text-xl font-medium mb-2">{dish.name}</h4>
+                          <p className="text-neutral-600 text-sm">{dish.description}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2" />
+                <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2" />
+              </Carousel>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {featuredDishes.map((dish, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
+                  <div className="overflow-hidden" style={{ aspectRatio: '2/3' }}>
+                    <img 
+                      src={dish.image} 
+                      alt={dish.name} 
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h4 className="text-xl font-medium mb-2">{dish.name}</h4>
+                    <p className="text-neutral-600 text-sm">{dish.description}</p>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h4 className="text-xl font-medium mb-2">{dish.name}</h4>
-                  <p className="text-neutral-600 text-sm">{dish.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
         
         {/* Menu Categories Tabs */}
