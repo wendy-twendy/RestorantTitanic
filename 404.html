@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Restaurant Titanic</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current URL and converts the path and query string into
+      // a query parameter called 'route' which is used by the app to determine the correct route
+      const segment = 1;
+      const l = window.location;
+      const origin = l.origin;
+      const firstPath = l.pathname.split('/')[1];
+      
+      // Only redirect if the path is not part of the GitHub repo name
+      if (firstPath === 'restaurant-titanic') {
+        l.replace(
+          origin + 
+          l.pathname.split('/').slice(0, segment + 1).join('/') + 
+          '/?route=' + 
+          encodeURIComponent(l.pathname.slice(segment + 1)) +
+          l.search
+        );
+      } else {
+        l.replace(
+          origin + 
+          '/restaurant-titanic/' + 
+          '?route=' + 
+          encodeURIComponent(l.pathname.slice(1)) +
+          l.search
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Restaurant Titanic...</p>
+  </body>
+</html>
