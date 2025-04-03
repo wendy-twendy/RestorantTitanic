@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { menuCategories } from "@/data/menuData";
 
 // Featured dishes with actual images
@@ -57,53 +55,57 @@ export default function Menu() {
         
         {/* Menu Categories Tabs */}
         <div className="mb-12">
-          <Tabs defaultValue="fish" value={activeCategory} onValueChange={setActiveCategory} className="pt-5">
-            <TabsList className="flex flex-wrap justify-center p-0 mb-10 bg-transparent gap-2 max-w-full">
-              {menuCategories.map((category) => (
-                <TabsTrigger
-                  key={category.id}
-                  value={category.id}
-                  className="px-4 py-2 border border-primary-200 data-[state=active]:bg-primary data-[state=active]:text-white text-sm md:text-base whitespace-nowrap"
-                >
-                  {category.title}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {/* Menu Content */}
+          <h3 className="text-2xl font-display font-semibold text-center mb-8">Menu Categories</h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
             {menuCategories.map((category) => (
-              <TabsContent key={category.id} value={category.id} className="mt-2">
-                <Card className="overflow-visible">
-                  <CardContent className="p-6 pt-8">
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-display font-semibold mb-2">{category.title}</h3>
-                      <p className="text-neutral-600">{category.description}</p>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {category.items.map((item, index) => (
-                        <div key={index} className="menu-item">
-                          <div className="flex justify-between mb-1">
-                            <h4 className="font-medium">{item.name}</h4>
-                            <span className="font-medium text-accent">{item.price}</span>
-                          </div>
-                          {item.description && (
-                            <p className="text-sm text-neutral-500">{item.description}</p>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                {category.id === "wines" && (
-                  <p className="text-sm text-neutral-500 text-center italic mt-4">
-                    All prices are in Albanian Lek (ALL). Menu items and prices may change seasonally to ensure we serve only the freshest ingredients.
-                  </p>
-                )}
-              </TabsContent>
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-3 py-3 rounded-md border ${
+                  activeCategory === category.id 
+                    ? "bg-primary text-white border-primary" 
+                    : "bg-white border-neutral-200 text-neutral-700 hover:bg-neutral-50"
+                } text-sm md:text-base transition-colors font-medium text-center`}
+              >
+                {category.title}
+              </button>
             ))}
-          </Tabs>
+          </div>
+            
+          {/* Menu Content */}
+          <div className="mt-10 border-t pt-8">
+            {menuCategories.map((category) => (
+              category.id === activeCategory && (
+                <div key={category.id} className="menu-content">
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-display font-semibold mb-2">{category.title}</h3>
+                    <p className="text-neutral-600">{category.description}</p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {category.items.map((item, index) => (
+                      <div key={index} className="menu-item bg-white p-4 rounded-lg shadow-sm border border-neutral-100">
+                        <div className="flex justify-between mb-1">
+                          <h4 className="font-medium">{item.name}</h4>
+                          <span className="font-medium text-accent">{item.price}</span>
+                        </div>
+                        {item.description && (
+                          <p className="text-sm text-neutral-500">{item.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {category.id === "wines" && (
+                    <p className="text-sm text-neutral-500 text-center italic mt-6">
+                      All prices are in Albanian Lek (ALL). Menu items and prices may change seasonally to ensure we serve only the freshest ingredients.
+                    </p>
+                  )}
+                </div>
+              )
+            ))}
+          </div>
         </div>
       </div>
     </section>
