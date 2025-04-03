@@ -6,7 +6,7 @@ export default function HeroCarousel() {
       <div className="h-full w-full">
         <div className="relative h-full w-full">
           <img
-            src="photos/ambience-6.jpg"
+            src="/photos/ambience-6.jpg"
             alt="Restorant Titanic dining area with sea view"
             className="h-full w-full object-cover"
           />

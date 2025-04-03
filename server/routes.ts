@@ -1,5 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import express from "express";
+import path from "path";
 import { storage } from "./storage";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -8,6 +10,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // use storage to perform CRUD operations on the storage interface
   // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
+  
+  // Serve the photos directory as static files
+  const photosPath = path.resolve(process.cwd(), "photos");
+  app.use("/photos", express.static(photosPath));
 
   const httpServer = createServer(app);
 

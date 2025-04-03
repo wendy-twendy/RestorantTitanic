@@ -8,17 +8,17 @@ const featuredDishes = [
   {
     name: "Grilled Sea Bass",
     description: "Fresh sea bass grilled with Mediterranean herbs, olive oil, and lemon",
-    image: "photos/dish-3.jpg"
+    image: "/photos/dish-3.jpg"
   },
   {
     name: "Seafood Risotto",
     description: "Creamy risotto with prawns, mussels, and fresh catch of the day",
-    image: "photos/dish-4.jpg"
+    image: "/photos/dish-4.jpg"
   },
   {
     name: "Seafood Platter",
     description: "A selection of the freshest Adriatic seafood, grilled to perfection",
-    image: "photos/dish-9.jpg"
+    image: "/photos/dish-9.jpg"
   }
 ];
 
