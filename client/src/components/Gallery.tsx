@@ -149,7 +149,7 @@ export default function Gallery() {
                 {filteredImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="gallery-item cursor-pointer" onClick={() => handleImageClick(image)}>
-                      <div className="relative overflow-hidden rounded-lg shadow-md h-64 mx-1">
+                      <div className="relative overflow-hidden rounded-lg shadow-md aspect-square mx-1">
                         <img 
                           src={image.src} 
                           alt={image.alt} 
@@ -172,7 +172,7 @@ export default function Gallery() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {filteredImages.map((image, index) => (
               <div key={index} className="gallery-item cursor-pointer" onClick={() => handleImageClick(image)}>
-                <div className="relative overflow-hidden rounded-lg shadow-md h-64">
+                <div className="relative overflow-hidden rounded-lg shadow-md aspect-square">
                   <img 
                     src={image.src} 
                     alt={image.alt} 
