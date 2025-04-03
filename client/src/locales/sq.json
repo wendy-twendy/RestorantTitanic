@@ -28,7 +28,43 @@
     "title": "Menu Jonë",
     "description": "Shijoni shijët autentike të Mesdheut",
     "signatureDishes": "Pjatat tona të Veçanta",
-    "allPricesNote": "Të gjitha çmimet janë në Lek shqiptar (ALL). Artikujt e menusë dhe çmimet mund të ndryshojnë sezonalisht për të siguruar që shërbejmë vetëm përbërësit më të freskët."
+    "allPricesNote": "Të gjitha çmimet janë në Lek shqiptar (ALL). Artikujt e menusë dhe çmimet mund të ndryshojnë sezonalisht për të siguruar që shërbejmë vetëm përbërësit më të freskët.",
+    "featuredDishes": {
+      "crudoMix": {
+        "name": "Miksi Crudo",
+        "description": "Një përzgjedhje delikate e prodhimeve të detit të papërpunuara, përfshirë peshk të freskët lokal, e shërbyer me lëng limoni dhe barishte"
+      },
+      "seafoodPasta": {
+        "name": "Pasta me Fruta Deti",
+        "description": "Pasta shtëpiake me një përzierje të pasur të prodhimeve të freskëta të detit në një salcë të lehtë domatesh"
+      }
+    },
+    "categories": {
+      "fish": {
+        "title": "Specialitete Peshku",
+        "description": "Të freskëta nga Deti Adriatik, ushqimet tona të detit zgjidhen çdo ditë për të siguruar cilësinë më të lartë."
+      },
+      "appetizers": {
+        "title": "Aperitivë të Pjekur & Skuqur",
+        "description": "Startera perfekte për t'u ndarë dhe shijuar me përzgjedhjen tonë të verërave."
+      },
+      "crudo": {
+        "title": "Aperitivë Crudo",
+        "description": "Delikatesë të freskëta të papërpunuara të përgatitura në stilin tradicional mesdhetar."
+      },
+      "pasta": {
+        "title": "Pasta & Risoto",
+        "description": "Pastat dhe risotot tradicionale italiane me ndikim mesdhetar."
+      },
+      "soups": {
+        "title": "Supa & Sallatat",
+        "description": "Shoqërime të freskëta dhe të shijshme për vaktin tuaj."
+      },
+      "wines": {
+        "title": "Verëra & Pijet",
+        "description": "Verëra të përzgjedhura me kujdes dhe pije freskuese për të plotësuar vaktin tuaj."
+      }
+    }
   },
   "gallery": {
     "title": "Galeria Jonë",

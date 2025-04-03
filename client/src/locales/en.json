@@ -28,7 +28,43 @@
     "title": "Our Menu",
     "description": "Savor the authentic flavors of the Mediterranean",
     "signatureDishes": "Signature Dishes",
-    "allPricesNote": "All prices are in Albanian Lek (ALL). Menu items and prices may change seasonally to ensure we serve only the freshest ingredients."
+    "allPricesNote": "All prices are in Albanian Lek (ALL). Menu items and prices may change seasonally to ensure we serve only the freshest ingredients.",
+    "featuredDishes": {
+      "crudoMix": {
+        "name": "Crudo Mix",
+        "description": "A delicate selection of raw seafood, including fresh local catch, served with citrus and herbs"
+      },
+      "seafoodPasta": {
+        "name": "Seafood Pasta",
+        "description": "Homemade pasta with a rich medley of fresh seafood in a light tomato sauce"
+      }
+    },
+    "categories": {
+      "fish": {
+        "title": "Fish Specialties",
+        "description": "Fresh from the Adriatic Sea, our seafood is selected daily to ensure the highest quality."
+      },
+      "appetizers": {
+        "title": "Grilled & Fried Appetizers",
+        "description": "Perfect starters to share and enjoy with our selection of wines."
+      },
+      "crudo": {
+        "title": "Crudo Appetizers",
+        "description": "Fresh raw delicacies prepared in the traditional Mediterranean style."
+      },
+      "pasta": {
+        "title": "Pasta & Risotto",
+        "description": "Traditional Italian pastas and risottos with Mediterranean influences."
+      },
+      "soups": {
+        "title": "Soups & Salads",
+        "description": "Fresh and flavorful accompaniments to your meal."
+      },
+      "wines": {
+        "title": "Wines & Beverages",
+        "description": "Carefully selected wines and refreshing beverages to complement your meal."
+      }
+    }
   },
   "gallery": {
     "title": "Our Gallery",
