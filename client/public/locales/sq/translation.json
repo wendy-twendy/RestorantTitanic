@@ -1,0 +1,73 @@
+{
+  "general": {
+    "language": "Gjuha",
+    "english": "Anglisht",
+    "albanian": "Shqip"
+  },
+  "navbar": {
+    "home": "Kryefaqja",
+    "about": "Historia Jonë",
+    "menu": "Menyja",
+    "gallery": "Galeria",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "tagline": "Ushqim i Shijshëm Buzë Detit",
+    "description": "Përjetoni shijen autentike të kuzhinës Adriatike në zemër të Durrësit",
+    "viewMenu": "Shiko Menynë",
+    "reserveTable": "Rezervo një Tavolinë"
+  },
+  "about": {
+    "title": "Historia Jonë",
+    "subtitle": "Nga Fillimet e Thjeshta",
+    "description1": "Restoranti Titanik hapi dyert e tij në vitin 2010 me një ide të thjeshtë: të sjellë ushqimin më të freskët të detit nga Deti Adriatik direkt në pjatën tuaj. I vendosur në zonën historike të Durrësit, restoranti ynë është bërë një ndër të preferuarit e banorëve vendas dhe turistëve.",
+    "description2": "Kuzhinierët tanë përgatisin çdo pjatë me pasion dhe precizion, duke kombinuar receta tradicionale shqiptare me teknika moderne kulinare për të krijuar përvoja të paharrueshme gatimi.",
+    "readMore": "Lexo Historinë e Plotë"
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Përjetoni Ambientin Tonë",
+    "all": "Të Gjitha",
+    "dishes": "Gatimet",
+    "ambience": "Ambienti"
+  },
+  "menu": {
+    "title": "Menyja Jonë",
+    "signatureDishes": "Pjatat Speciale",
+    "seafood": "Ushqime Deti",
+    "mains": "Pjatat Kryesore",
+    "desserts": "Ëmbëlsirat",
+    "wines": "Verërat",
+    "priceNotice": "Të gjitha çmimet janë në Lekë (ALL). Pikat e menysë dhe çmimet mund të ndryshojnë sipas stinës për të siguruar që shërbejmë vetëm përbërësit më të freskët.",
+    "downloadPdf": "Shkarko Menynë PDF"
+  },
+  "contact": {
+    "title": "Na Kontaktoni",
+    "subtitle": "Do të Na Pëlqente të Dëgjonim nga Ju",
+    "address": "Adresa",
+    "phone": "Telefoni",
+    "email": "Email",
+    "hoursTitle": "Orari i Punës",
+    "mondayToFriday": "E Hënë - E Premte",
+    "saturdaySunday": "E Shtunë - E Diel",
+    "followUs": "Na Ndiqni",
+    "reservation": {
+      "title": "Bëni një Rezervim",
+      "name": "Emri Juaj",
+      "email": "Email",
+      "phone": "Numri i Telefonit",
+      "date": "Data",
+      "time": "Ora",
+      "guests": "Numri i Personave",
+      "specialRequests": "Kërkesa të Veçanta",
+      "submit": "Rezervo Tani",
+      "success": "Rezervimi u pranua! Do t'ju kontaktojmë së shpejti për të konfirmuar.",
+      "error": "Pati një problem me rezervimin tuaj. Ju lutemi provoni përsëri ose na kontaktoni drejtpërdrejt."
+    }
+  },
+  "footer": {
+    "rights": "Të Gjitha të Drejtat e Rezervuara",
+    "privacy": "Politika e Privatësisë",
+    "terms": "Kushtet e Shërbimit"
+  }
+}

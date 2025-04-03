@@ -1,8 +1,9 @@
-import type { Express } from "express";
+import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import express from "express";
 import path from "path";
 import { storage } from "./storage";
+import geoip from 'geoip-lite';
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // put application routes here
